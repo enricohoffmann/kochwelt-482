@@ -13,9 +13,11 @@
 <body class="mybody">
 
     <header class="header">
-        <img class="kochwelt-logo-top" src="../assets/logo.png">
+        <a href="../index.html">
+            <img class="kochwelt-logo-top" src="../assets/logo.png">
+        </a>
         <nav class="menu">
-            <a href="#">Start</a>
+            <a href="../index.html">Start</a>
             <a href="#">Rezept des Tages</a>
             <a href="#">Kontakt</a>
             <a href="#">Impressum</a>
@@ -45,6 +47,8 @@
 
         <section class="ingredients">
             <p>Zutaten für </p>
+            <input class="portion-input" value="1" min="0" max="20" type="number" placeholder="Anzahl der Personen">
+            <button class="button">Portionen</button>
         </section>
     </div>
 </body>
