@@ -1,14 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rezept-01</title>
+    <title>Mini-Quiches</title>
     <link rel="stylesheet" href="./recipes-04.css">
     <link rel="stylesheet" href="../style.css">
     <script src="./recipes-04.js"></script>
+    <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon">
 </head>
-<body>
-    
+<body onload="reciepe04init()">
+    <header class="rc-04-header">
+
+        <a href="../index.html" title="Zurück zur Haupseite">
+            <img class="header-logo" src="../assets/logo.png" alt="Header Logo">
+        </a>
+
+        <div class="header-links">
+            <a href="../index.html" title="Zurück zur Haupseite">Start</a>
+            <a href="#">Rezept des Tages</a>
+            <a href="#">Kontakt</a>
+            <a href="#">Impressum</a>
+        </div>
+    </header>
+
+    <!-- Überschrift / Bild  -->
+
+    <div class="reciepe-04-container">
+        <h1>Mini-Quiches</h1>
+
+        <img class="reciepe-04-image" src="../assets/img/rezept-04-bild.jpg" alt="Mini-Quiches Rezeptbild">
+
+        <div class="reciepe-04-short-container">
+            <span class="reciepe-04-short">
+                <img src="../assets/icons/clock-regular.svg" alt="benötigte Zeit">
+                <p>ca. 50 Min.</p>
+            </span>
+            <span class="reciepe-04-short">
+                <img src="../assets/icons/brain-solid.svg" alt="Schwierigkeitsgrad">
+                <p>einfach</p>
+            </span>
+            <span class="reciepe-04-short">
+                <img src="../assets/icons/calendar-alt-regular.svg" alt="Rezepterstellung">
+                <p>30.05.2025</p>
+            </span>
+        </div>
+
+
+        <div class="recipes-04-seperator"></div>
+
+        <div class="recipes-04-input-container">
+            <p>Zutaten für </p>
+            <input id="portionsInput" type="number" placeholder="Anzahl" value="1" min="1" max="20" onchange="portionValidator()">
+            <button type="button" onclick="calulate()">Portionen</button>
+        </div>
+
+        <p id="error-label" class="dNone error-red">Die Eingabe war ungültig. Es werden nur Zahlen zwischen 1 und 20 akzeptiert.</p>
+
+
+        <div id="table-container" class="recipes-04-ingredients">
+        </div>
+
+        <h3>Zubereitung</h3>
+
+        <div class="reciepe-04-short-container">
+            <span class="reciepe-04-short">
+                <img src="../assets/icons/clock-regular.svg" alt="Zubereitungszeit Logo">
+                <p>ca. 50 Minuten</p>
+            </span>
+            <span class="reciepe-04-short">
+                <img src="../assets/icons/clock-regular.svg" alt="Zubereitungszeit Gesamt Logo">
+                <p id="gesamt-minuten"></p>
+            </span>
+        </div>
+
+        <p>1. Teig etwas ausrollen und 12 Kreise (&Oslash; 10cm) ausstechen. in die gefetteten Mulden euner 12er - Muffinform legen.
+            Je einen kleinen Rand formen und am Boden mit einer Gabel einstechen. Den Ofen auf 200 Grad Oder- / Unterhitze vorheizen.<br>
+            2. Fleisch trocken tupfen, würfeln. Spargel waschen, im unteren Drittel schälen und in 2 cm Stücke schneiden. Kräuter abbrausen, trocken schütteln und fein schneiden.
+            Knoblauch und Schalotte abziehen und hacken. In öl anbraten. Fleisch kurz mitbraten. Spargel unterschwenken. Salzen und pfeffern. Auf die Muffinmulden verteilen.<br>
+            3. Eier, Sahne, Zitrone, Stärke und 1 EL Käse mischen. Würzen. In die Mulden füllen. 2 EL Käse und Kräuter aufstreuen. 20 - 25 Minuten backen.
+        </p>
+
+        <h4>Rezept erstellt von</h4>
+
+        <div class="profil-container">
+            <img src="../assets/img/profile.png" alt="Profile Logo">
+            <p>Enrico Hoffmann</p>
+        </div>
+
+    </div>
+
+
+    <footer></footer>
 </body>
 </html>
