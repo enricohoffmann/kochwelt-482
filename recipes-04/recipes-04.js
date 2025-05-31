@@ -37,6 +37,7 @@ function reciepe04init() {
 
     portionsCalulator(1);
     
+    loadFooter();
 }
 
 
@@ -168,3 +169,5 @@ function createTable() {
     document.getElementById("gesamt-minuten").innerText = `Gesamtzeit ca. ${minuten * portion} Minuten`
 
 }
+
+

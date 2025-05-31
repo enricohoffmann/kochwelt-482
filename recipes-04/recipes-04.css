@@ -158,6 +158,7 @@ h3{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 36px;
 
     img{
         height: 96px;
@@ -167,11 +168,11 @@ h3{
 }
 
 
-footer{
+/* footer{
     height: 96px;
     background-color: #403b3b;
     margin-top: 48px;
-}
+} */
 
 .dNone{
     display: none;
