@@ -1,0 +1,26 @@
+.footer {
+    background-color: #403B3B;
+    height: 300px;
+}
+
+.footer-inner {
+    padding: 90px 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-kochwelt-logo {
+    width: 256px;
+    height: 80px;
+}
+
+.social-logos {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.social-logos img {
+    width: 220px;
+    height: 60px;
+}
