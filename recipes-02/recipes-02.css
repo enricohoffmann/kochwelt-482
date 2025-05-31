@@ -1,0 +1,79 @@
+.mybody {
+    margin: 0;
+}
+
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-shadow: 0px 0px 12px 2px rgba(24, 15, 15, 0.339)
+}
+
+.kochwelt-logo-top {
+    height: 64px;
+    width: auto;
+    object-fit: cover;
+    margin-left: 180px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-right: 180px;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu a:hover {
+    color: #008000;
+    text-decoration: underline;
+    text-underline-offset: 12px;
+    text-decoration-thickness: 3px;
+}
+
+
+.main {
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+.title {}
+
+.title-image {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.data {
+    display: flex;
+    gap: 24px;
+
+}
+
+.preparation-time {
+    background-color: #EFEFEF;
+    border-radius: 4px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 4px 8px;
+}
+
+.data img {
+    height: 16px;
+    width: 16px;
+}
+
+.ingredients {}
+
