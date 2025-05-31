@@ -47,16 +47,17 @@ h1{
     margin-bottom: 16px;
 }
 
-.reciepe-04-container{
+.reciepe-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 36px;
+    max-width: 1440px;
 }
 
-.reciepe-04-image{
+.reciepe-image{
     height: 200px;
     object-fit: cover;
     background-repeat: no-repeat;
@@ -64,14 +65,14 @@ h1{
     border-radius: 8px;
 }
 
-.reciepe-04-short-container{
+.reciepe-short-container{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-top: 24px;
 }
 
-.reciepe-04-short{
+.reciepe-short{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,13 +94,13 @@ h1{
     }
 }
 
-.recipes-04-seperator{
+.recipes-seperator{
     height: 1px;
     border-bottom: 1px solid rgb(235, 233, 233);
     margin-top: 48px;
 }
 
-.recipes-04-input-container{
+.recipes-input-container{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -129,20 +130,20 @@ h1{
     }
 }
 
-.reciepe-04-table{
+.reciepe-table{
     margin-top: 8px;
     display: flow;
 }
 
 
-.reciepe-04-table-row-even{
+.reciepe-table-row-even{
     background-color: rgb(235, 233, 233);
     border-radius: 8px;
     display: flex;
     
 }
 
-.reciepe-04-tabledata{
+.reciepe-tabledata{
     padding: 16px 8px 16px 24px;
     font-size: 16px;
 }
