@@ -1,3 +1,9 @@
+function init() {
+    loadHeader();
+    loadFooter();
+}
+
+
 function loadFooter() {
     let footer = document.getElementsByTagName("footer");
     footer[0].classList.add("footer");
@@ -55,4 +61,55 @@ function loadFooter() {
     
     sozial_logos.appendChild(twitter_link);
 
+}
+
+
+function loadHeader() {
+
+    let header = document.getElementsByTagName("header")[0];
+
+    let logo_link = document.createElement("a");
+    logo_link.setAttribute("href", "../index.html");
+    logo_link.setAttribute("title", "Zurück zur Hauptseite");
+
+    let logo = document.createElement("img");
+    logo.setAttribute("class", "header-logo");
+    logo.setAttribute("src", "../assets/logo.png");
+    logo.setAttribute("alt", "Header Logo");
+    logo_link.appendChild(logo);
+
+    header.appendChild(logo_link);
+
+    let header_links = document.createElement("div");
+    header_links.classList.add("header-links");
+
+    header.appendChild(header_links);
+
+    let link_start = document.createElement("a");
+    link_start.setAttribute("href", "../index.html");
+    link_start.setAttribute("title", "Zurück zur Hauptseite");
+    link_start.innerText = "Start";
+
+    header_links.appendChild(link_start);
+
+    let link_reciepe_of_day = document.createElement("a");
+    link_reciepe_of_day.setAttribute("href", "#");
+    link_reciepe_of_day.setAttribute("title", "");
+    link_reciepe_of_day.innerText = "Rezept des Tages";
+
+    header_links.appendChild(link_reciepe_of_day);
+
+    let link_kontakt = document.createElement("a");
+    link_kontakt.setAttribute("href", "#");
+    link_kontakt.setAttribute("title", "");
+    link_kontakt.innerText = "Kontakt";
+
+    header_links.appendChild(link_kontakt);
+
+    let link_impressum = document.createElement("a");
+    link_impressum.setAttribute("href", "#");
+    link_impressum.setAttribute("title", "");
+    link_impressum.innerText = "Impressum";
+
+    header_links.appendChild(link_impressum);
 }

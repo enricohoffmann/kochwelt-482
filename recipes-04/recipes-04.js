@@ -37,6 +37,7 @@ function reciepe04init() {
 
     portionsCalulator(1);
     
+    loadHeader();
     loadFooter();
 }
 
