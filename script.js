@@ -74,7 +74,7 @@ function loadHeader() {
 
     let logo = document.createElement("img");
     logo.setAttribute("class", "header-logo");
-    logo.setAttribute("src", "../assets/logo.png");
+    logo.setAttribute("src", "./assets/logo.png");
     logo.setAttribute("alt", "Header Logo");
     logo_link.appendChild(logo);
 
