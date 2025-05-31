@@ -37,6 +37,8 @@ function reciepe04init() {
 
     portionsCalulator(1);
     
+    loadHeader();
+    loadFooter();
 }
 
 
@@ -123,19 +125,19 @@ function createTable() {
     table_div.innerHTML = "";
 
     let table = document.createElement("table");
-    table.setAttribute("class", "reciepe-04-table");
-    table.setAttribute("id", "reciepe-04-table");
+    table.setAttribute("class", "reciepe-table");
+    table.setAttribute("id", "reciepe-table");
 
     table_div.appendChild(table);
 
-    let table_element = document.getElementById("reciepe-04-table");
+    let table_element = document.getElementById("reciepe-table");
 
     for (let i = 0; i < reciepeArray_number_portion.length; i++) {
         
         let row = document.createElement("tr");
 
         if(i%2 == 0){
-            row.classList.add("reciepe-04-table-row-even");
+            row.classList.add("reciepe-table-row-even");
         }
 
         let tableData = document.createElement("td");
@@ -156,7 +158,7 @@ function createTable() {
 
         let text = document.createTextNode(dataText);
 
-        tableData.classList.add("reciepe-04-tabledata");
+        tableData.classList.add("reciepe-tabledata");
 
         tableData.appendChild(text);
 
@@ -168,3 +170,5 @@ function createTable() {
     document.getElementById("gesamt-minuten").innerText = `Gesamtzeit ca. ${minuten * portion} Minuten`
 
 }
+
+

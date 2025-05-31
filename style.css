@@ -8,6 +8,47 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
+header{
+    height: 80px ;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 4px 5px rgb(211, 210, 210);
+}
+
+.header-logo{
+    height: 56px;
+    margin-left: 24px;
+    cursor: pointer;
+}
+
+.header-links{
+    display: flex;
+    flex-grow: 0;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    margin-right: 24px;
+    margin-bottom: 4px;
+
+    a{
+        text-decoration: none;
+        color: black;
+        margin-right: 16px;
+        font-weight: 500;
+        line-height: 1.6;
+        
+    }
+
+    a:hover{
+        color: #008000;
+        border-bottom: 4px solid #008000;
+        
+    }
+}
+
 .footer {
     background-color: #403B3B;
     height: 300px;

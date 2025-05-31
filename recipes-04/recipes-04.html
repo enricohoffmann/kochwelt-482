@@ -7,49 +7,38 @@
     <link rel="stylesheet" href="./recipes-04.css">
     <link rel="stylesheet" href="../style.css">
     <script src="./recipes-04.js"></script>
+    <script src="../script.js"></script>
     <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon">
 </head>
 <body onload="reciepe04init()">
-    <header class="rc-04-header">
-
-        <a href="../index.html" title="Zurück zur Haupseite">
-            <img class="header-logo" src="../assets/logo.png" alt="Header Logo">
-        </a>
-
-        <div class="header-links">
-            <a href="../index.html" title="Zurück zur Haupseite">Start</a>
-            <a href="#">Rezept des Tages</a>
-            <a href="#">Kontakt</a>
-            <a href="#">Impressum</a>
-        </div>
-    </header>
+    <header></header>
 
     <!-- Überschrift / Bild  -->
 
-    <div class="reciepe-04-container">
+    <div class="reciepe-container">
         <h1>Mini-Quiches</h1>
 
-        <img class="reciepe-04-image" src="../assets/img/rezept-04-bild.jpg" alt="Mini-Quiches Rezeptbild">
+        <img class="reciepe-image" src="../assets/img/rezept-04-bild.jpg" alt="Mini-Quiches Rezeptbild">
 
-        <div class="reciepe-04-short-container">
-            <span class="reciepe-04-short">
+        <div class="reciepe-short-container">
+            <span class="reciepe-short">
                 <img src="../assets/icons/clock-regular.svg" alt="benötigte Zeit">
                 <p>ca. 50 Min.</p>
             </span>
-            <span class="reciepe-04-short">
+            <span class="reciepe-short">
                 <img src="../assets/icons/brain-solid.svg" alt="Schwierigkeitsgrad">
                 <p>einfach</p>
             </span>
-            <span class="reciepe-04-short">
+            <span class="reciepe-short">
                 <img src="../assets/icons/calendar-alt-regular.svg" alt="Rezepterstellung">
                 <p>30.05.2025</p>
             </span>
         </div>
 
 
-        <div class="recipes-04-seperator"></div>
+        <div class="recipes-seperator"></div>
 
-        <div class="recipes-04-input-container">
+        <div class="recipes-input-container">
             <p>Zutaten für </p>
             <input id="portionsInput" type="number" placeholder="Anzahl" value="1" min="1" max="20" onchange="portionValidator()">
             <button type="button" onclick="calulate()">Portionen</button>
@@ -58,17 +47,17 @@
         <p id="error-label" class="dNone error-red">Die Eingabe war ungültig. Es werden nur Zahlen zwischen 1 und 20 akzeptiert.</p>
 
 
-        <div id="table-container" class="recipes-04-ingredients">
+        <div id="table-container">
         </div>
 
         <h3>Zubereitung</h3>
 
-        <div class="reciepe-04-short-container">
-            <span class="reciepe-04-short">
+        <div class="reciepe-short-container">
+            <span class="reciepe-short">
                 <img src="../assets/icons/clock-regular.svg" alt="Zubereitungszeit Logo">
                 <p>ca. 50 Minuten</p>
             </span>
-            <span class="reciepe-04-short">
+            <span class="reciepe-short">
                 <img src="../assets/icons/clock-regular.svg" alt="Zubereitungszeit Gesamt Logo">
                 <p id="gesamt-minuten"></p>
             </span>
