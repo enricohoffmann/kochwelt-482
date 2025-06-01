@@ -81,7 +81,6 @@
     border-top: 1px solid #EFEFEF;
     padding-top: 16px;
     display: flex;
-
 }
 
 .portion-input {
@@ -98,4 +97,12 @@
     color: white;
     width: 160px;
     border: none;
+}
+
+.error {
+    color: red;
+}
+
+.dNone {
+    display: none;
 }

@@ -47,10 +47,14 @@
 
         <section class="ingredients">
             <p>Zutaten für </p>
-            <input class="portion-input" value="1" min="0" max="20" type="number" placeholder="Anzahl der Personen">
-            <button class="button">Portionen</button>
+            <input id="portion-input-calc" class="portion-input" value="1" min="0" max="20" type="number" placeholder="Anzahl der Personen">
+            <button class="button" onclick="checkportion()">Portionen</button>
         </section>
+        <p id="errorIngredients" class="error dNone">Die Eingabe war ungültig. Es werden nur Zahlen zwischen 1 und 20
+            akzeptiert.</p>
     </div>
 </body>
+
+<script src="./recipes-02.js"></script>
 
 </html>
