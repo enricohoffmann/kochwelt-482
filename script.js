@@ -2,7 +2,6 @@ function init(isStartpage) {
     loadHeader(isStartpage);
     loadFooter(isStartpage);
 }
-
 function loadHeader(isStartpage) {
 
     let header = document.getElementsByTagName("header")[0];
@@ -116,3 +115,7 @@ function loadFooter(isStartpage) {
 }
 
 
+let rezeptOpen = document.getElementById('rezeptBtn');
+rezeptOpen.addEventListener('click', function(){
+    window.open('./recipes-01/recipes-01.html');
+})
