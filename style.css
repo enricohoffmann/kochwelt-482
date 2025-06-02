@@ -170,3 +170,9 @@ button {
 .vs_text {
     font-size: 29px;
 }
+
+@media (max-width:650px){
+    .header-links{
+        display: none;
+    }
+}
