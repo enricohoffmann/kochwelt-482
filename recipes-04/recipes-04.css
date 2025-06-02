@@ -1,46 +1,5 @@
 
 
-header{
-    height: 80px ;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    box-shadow: 0px 4px 5px rgb(211, 210, 210);
-}
-
-.header-logo{
-    height: 56px;
-    margin-left: 24px;
-    cursor: pointer;
-}
-
-.header-links{
-    display: flex;
-    flex-grow: 0;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 100%;
-    margin-right: 24px;
-    margin-bottom: 4px;
-
-    a{
-        text-decoration: none;
-        color: black;
-        margin-right: 16px;
-        font-weight: 500;
-        line-height: 1.6;
-        
-    }
-
-    a:hover{
-        color: #008000;
-        border-bottom: 4px solid #008000;
-        
-    }
-}
-
 h1{
     margin-block-start: 0;
     margin-block-end: 0;
@@ -167,13 +126,6 @@ h3{
     }
 }
 
-
-/* footer{
-    height: 96px;
-    background-color: #403b3b;
-    margin-top: 48px;
-} */
-
 .dNone{
     display: none;
 }
@@ -182,3 +134,11 @@ h3{
     color: red;
     font-size: 12px;
 }
+
+@media (max-width:1500px) {
+    .reciepe-container{
+        margin-left: 36px;
+        margin-right: 36px;
+    }
+}
+
