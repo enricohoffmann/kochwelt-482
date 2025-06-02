@@ -78,8 +78,7 @@ h1 {
     button {
         background-color: #008000;
         height: 36px;
-        padding-left: 24px;
-        padding-right: 24px;
+        width: 200px;
         text-align: center;
         cursor: pointer;
         color: white;
