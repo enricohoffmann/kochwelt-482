@@ -2,7 +2,6 @@ function init(isStartpage) {
     loadHeader(isStartpage);
     loadFooter(isStartpage);
 }
-
 function loadHeader(isStartpage) {
 
     let header = document.getElementsByTagName("header")[0];
@@ -13,7 +12,7 @@ function loadHeader(isStartpage) {
 
     let logo = document.createElement("img");
     logo.setAttribute("class", "header-logo");
-    logo.setAttribute("src", isStartpage ? "./assets/logo.png" : "../assets/logo.png");
+    logo.setAttribute("src", isStartpage ? "./assets/img/logo.png" : "../assets/img/logo.png");
     logo.setAttribute("alt", "Header Logo");
     logo_link.appendChild(logo);
 
@@ -116,3 +115,7 @@ function loadFooter(isStartpage) {
 }
 
 
+let rezeptOpen = document.getElementById('rezeptBtn');
+rezeptOpen.addEventListener('click', function(){
+    window.open('./recipes-01/recipes-01.html');
+})
