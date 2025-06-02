@@ -31,8 +31,8 @@ function loadHeader(isStartpage) {
     header_links.appendChild(link_start);
 
     let link_reciepe_of_day = document.createElement("a");
-    link_reciepe_of_day.setAttribute("href", "#");
-    link_reciepe_of_day.setAttribute("title", "");
+    link_reciepe_of_day.setAttribute("href", isStartpage ? "./recipes-01/recipes-01.html" : "../recipes-01/recipes-01.html");
+    link_reciepe_of_day.setAttribute("title", "Hähnchen Döner");
     link_reciepe_of_day.innerText = "Rezept des Tages";
 
     header_links.appendChild(link_reciepe_of_day);
@@ -45,8 +45,8 @@ function loadHeader(isStartpage) {
     header_links.appendChild(link_kontakt);
 
     let link_impressum = document.createElement("a");
-    link_impressum.setAttribute("href", "#");
-    link_impressum.setAttribute("title", "");
+    link_impressum.setAttribute("href", isStartpage ? "./impressum.html" : "../impressum.html");
+    link_impressum.setAttribute("title", "Impressum");
     link_impressum.innerText = "Impressum";
 
     header_links.appendChild(link_impressum);
