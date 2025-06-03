@@ -2,6 +2,11 @@ function init(isStartpage) {
     loadHeader(isStartpage);
     loadFooter(isStartpage);
 }
+
+
+
+
+
 function loadHeader(isStartpage) {
 
     let header = document.getElementsByTagName("header")[0];
@@ -50,6 +55,31 @@ function loadHeader(isStartpage) {
     link_impressum.innerText = "Impressum";
 
     header_links.appendChild(link_impressum);
+
+    /* let responsive_button = document.createElement('div');
+    responsive_button.classList.add('resp_button');
+    responsive_button.addEventListener('click', function() {
+       toggleRespMenu(); 
+    });
+
+    let res_button_image = document.createElement('img');
+    res_button_image.setAttribute("src", isStartpage ? "./assets/icons/bars-solid.svg" : "../assets/icons/bars-solid.svg");
+    res_button_image.classList.add('resp_button_img');
+
+    responsive_button.appendChild(res_button_image);
+    header_links.appendChild(responsive_button);
+
+    let content_Div = document.getElementsByClassName('content');
+
+    let resp_menu = document.createElement('div');
+    resp_menu.classList.add('resp_menu_box', 'resp_menu_close');
+    resp_menu.setAttribute('id', 'resp_menu');
+
+    content_Div[0].appendChild(resp_menu);
+    header.after(resp_menu); */
+
+
+
 }
 
 function loadFooter(isStartpage) {
@@ -116,6 +146,7 @@ function loadFooter(isStartpage) {
     twitter_link.appendChild(twitter_image); */
     
     sozial_logos.appendChild(twitter_link);
+
 
 }
 

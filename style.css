@@ -49,6 +49,28 @@ header {
     }
 }
 
+.resp_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(214, 214, 214);
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px gray;
+    margin-bottom: 6px;
+}
+
+.resp_button:hover{
+    background-color: #008000;
+}
+
+.resp_button_img{
+    width: 24px;
+    
+}
+
 .content{
     position: relative;
     overflow-x: hidden;
