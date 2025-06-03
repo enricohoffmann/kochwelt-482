@@ -56,7 +56,7 @@
 }
 
 .data {
-    padding-top: 48px;
+    padding-top: 30px;
     padding-bottom: 64px;
     display: flex;
     gap: 24px;
@@ -72,7 +72,7 @@
     padding: 4px 8px;
 }
 
-.data img {
+.preparation-time img {
     height: 16px;
     width: 16px;
 }
@@ -81,7 +81,6 @@
     border-top: 1px solid #EFEFEF;
     padding-top: 16px;
     display: flex;
-
 }
 
 .portion-input {
@@ -98,4 +97,44 @@
     color: white;
     width: 160px;
     border: none;
+}
+
+.error {
+    color: red;
+}
+
+.dNone {
+    display: none;
+}
+
+.recipe-container {}
+
+.row-style {
+    border-radius: 8px;
+    padding: 12px 0 12px 30px;
+    display: flex;
+    gap: 8px;
+}
+
+.background-grey {
+    background-color: #EFEFEF;
+}
+
+.background-white {
+    background-color: white;
+}
+
+table {
+    width: 100%;
+}
+
+.profil {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 35px;
+}
+.profil img {
+    height: 90px;
+    border-radius: 50%;
 }
