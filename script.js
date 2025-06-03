@@ -1,6 +1,12 @@
 function init(isStartpage) {
     loadHeader(isStartpage);
     loadFooter(isStartpage);
+
+    
+    let rezeptOpen = document.getElementById('rezeptBtn');
+    rezeptOpen.addEventListener('click', function(){
+        window.open('./recipes-01/recipes-01.html');
+    })
 }
 function loadHeader(isStartpage) {
 
@@ -33,12 +39,14 @@ function loadHeader(isStartpage) {
     let link_reciepe_of_day = document.createElement("a");
     link_reciepe_of_day.setAttribute("href", isStartpage ? "./recipes-01/recipes-01.html" : "../recipes-01/recipes-01.html");
     link_reciepe_of_day.setAttribute("title", "Hähnchen Döner");
+    link_reciepe_of_day.setAttribute("href", isStartpage ? "./recipes-01/recipes-01.html" : "../recipes-01/recipes-01.html");
+    link_reciepe_of_day.setAttribute("title", "Hähnchen Döner");
     link_reciepe_of_day.innerText = "Rezept des Tages";
 
     header_links.appendChild(link_reciepe_of_day);
 
     let link_kontakt = document.createElement("a");
-    link_kontakt.setAttribute("href", "./kontakt.html");
+    link_kontakt.setAttribute("href", isStartpage ? "./kontakt.html" : "../kontakt.html");
     link_kontakt.setAttribute("title", "");
     link_kontakt.innerText = "Kontakt";
 
@@ -47,9 +55,36 @@ function loadHeader(isStartpage) {
     let link_impressum = document.createElement("a");
     link_impressum.setAttribute("href", isStartpage ? "./impressum.html" : "../impressum.html");
     link_impressum.setAttribute("title", "Impressum");
+    link_impressum.setAttribute("href", isStartpage ? "./impressum.html" : "../impressum.html");
+    link_impressum.setAttribute("title", "Impressum");
     link_impressum.innerText = "Impressum";
 
     header_links.appendChild(link_impressum);
+
+    /* let responsive_button = document.createElement('div');
+    responsive_button.classList.add('resp_button');
+    responsive_button.addEventListener('click', function() {
+       toggleRespMenu(); 
+    });
+
+    let res_button_image = document.createElement('img');
+    res_button_image.setAttribute("src", isStartpage ? "./assets/icons/bars-solid.svg" : "../assets/icons/bars-solid.svg");
+    res_button_image.classList.add('resp_button_img');
+
+    responsive_button.appendChild(res_button_image);
+    header_links.appendChild(responsive_button);
+
+    let content_Div = document.getElementsByClassName('content');
+
+    let resp_menu = document.createElement('div');
+    resp_menu.classList.add('resp_menu_box', 'resp_menu_close');
+    resp_menu.setAttribute('id', 'resp_menu');
+
+    content_Div[0].appendChild(resp_menu);
+    header.after(resp_menu); */
+
+
+
 }
 
 function loadFooter(isStartpage) {
@@ -80,6 +115,7 @@ function loadFooter(isStartpage) {
 
     let facebook_link = document.createElement("a");
     facebook_link.classList.add("sozial-logo-links", "facebook")
+    facebook_link.classList.add("sozial-logo-links", "facebook")
     facebook_link.setAttribute("href", "http://facebook.com");
     facebook_link.setAttribute("title", "Link zu Facebook");
     facebook_link.setAttribute("target", "_blank");
@@ -93,7 +129,9 @@ function loadFooter(isStartpage) {
 
     let instagram_link = document.createElement("a");
     instagram_link.classList.add("sozial-logo-links", "instagram");
+    instagram_link.classList.add("sozial-logo-links", "instagram");
     instagram_link.setAttribute("href", "http://instagram.com");
+    instagram_link.setAttribute("title", "Link zu Instagram");
     instagram_link.setAttribute("title", "Link zu Instagram");
     instagram_link.setAttribute("target", "_blank");
 
@@ -106,6 +144,7 @@ function loadFooter(isStartpage) {
 
     let twitter_link = document.createElement("a");
     twitter_link.classList.add("sozial-logo-links", "twitter");
+    twitter_link.classList.add("sozial-logo-links", "twitter");
     twitter_link.setAttribute("href", "http://twitter.com");
     twitter_link.setAttribute("title", "Link zu Twitter");
     twitter_link.setAttribute("target", "_blank");
@@ -117,15 +156,5 @@ function loadFooter(isStartpage) {
     
     sozial_logos.appendChild(twitter_link);
 
-}
 
-
-let rezeptOpen = document.getElementById('rezeptBtn');
-rezeptOpen.addEventListener('click', function(){
-    window.open('./recipes-01/recipes-01.html');
-});
-
-
-function toggleRespMenu() {
-    document.getElementById("resp_menu").classList.toggle('resp_menu_close');
 }

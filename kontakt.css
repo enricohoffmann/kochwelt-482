@@ -16,6 +16,8 @@
 
 .title3{
     text-decoration: underline;
+    margin: 10px;
+    padding: 10px;
 }
 
 .form input{
