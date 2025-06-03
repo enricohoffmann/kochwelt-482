@@ -38,7 +38,7 @@ function loadHeader(isStartpage) {
     header_links.appendChild(link_reciepe_of_day);
 
     let link_kontakt = document.createElement("a");
-    link_kontakt.setAttribute("href", "#");
+    link_kontakt.setAttribute("href", "./kontakt.html");
     link_kontakt.setAttribute("title", "");
     link_kontakt.innerText = "Kontakt";
 
