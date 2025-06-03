@@ -57,6 +57,50 @@ header {
     }
 }
 
+.resp_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(214, 214, 214);
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px gray;
+    margin-bottom: 6px;
+}
+
+.resp_button:hover{
+    background-color: #008000;
+}
+
+.resp_button_img{
+    width: 24px;
+    
+}
+
+.content{
+    position: relative;
+    overflow-x: hidden;
+}
+
+.resp_menu_box{
+    background-color: rgb(219, 219, 219);
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+
+    position: absolute;
+    top: 80px;
+    right: 0;
+
+    transition: all 250ms ease-in-out;
+}
+
+.resp_menu_close{
+    transform: translateX(100%);
+}
+
 .content-center-footer{
     background-color: #403B3B;
     margin-top: auto;
@@ -77,6 +121,7 @@ header {
     padding-right: 24px;
 }
 
+/* .footer-inner {
 /* .footer-inner {
     padding: 90px 120px;
     display: flex;
@@ -228,6 +273,91 @@ button {
 
 .vs_text {
     font-size: 29px;
+}
+
+
+/***********************************/
+/* Impressum */
+/***********************************/
+
+.impressum-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 36px;
+    max-width: 1440px;
+
+    a:hover{
+        color: rgb(72, 90, 192);
+        font-weight: 500;
+    }
+}
+
+
+
+@media (max-width:1040px) {
+    .facebook {
+        background-image: url("./assets/img/Facebook_Logo_Primary.png");
+        background-size: 40px;
+    }
+
+    .instagram {
+        background-image: url("./assets/img/Instagram_Glyph_Gradient.png");
+        background-size: 40px;
+    }
+
+    .twitter {
+        background-image: url("./assets/img/Twitter_Social_Icon_Circle_Color.png");
+        background-size: 40px;
+    }
+
+    .social-logos {
+        gap: 8px;
+    }
+
+    .sozial-logo-links {
+        width: 60px;
+    }
+}
+
+@media (max-width:650px) {
+    .header-links {
+        display: none;
+    }
+
+    .footer-kochwelt-logo {
+        height: 56px;
+        width: 180px;
+    }
+}
+
+@media(max-width:440px){
+    .footer-kochwelt-logo {
+        width: 112px;
+        height: 32px;
+    }
+
+    .footer{
+        height: 80px;
+    }
+
+    .facebook {
+        background-size: 32px;
+    }
+
+    .instagram {
+        background-size: 32px;
+    }
+
+    .twitter {
+        background-size: 32px;
+    }
+
+    .social-logos {
+        gap: 0px;
+    }
 }
 
 
