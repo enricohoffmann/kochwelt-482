@@ -123,4 +123,9 @@ function loadFooter(isStartpage) {
 let rezeptOpen = document.getElementById('rezeptBtn');
 rezeptOpen.addEventListener('click', function(){
     window.open('./recipes-01/recipes-01.html');
-})
+});
+
+
+function toggleRespMenu() {
+    document.getElementById("resp_menu").classList.toggle('resp_menu_close');
+}
