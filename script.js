@@ -31,8 +31,8 @@ function loadHeader(isStartpage) {
     header_links.appendChild(link_start);
 
     let link_reciepe_of_day = document.createElement("a");
-    link_reciepe_of_day.setAttribute("href", "#");
-    link_reciepe_of_day.setAttribute("title", "");
+    link_reciepe_of_day.setAttribute("href", isStartpage ? "./recipes-01/recipes-01.html" : "../recipes-01/recipes-01.html");
+    link_reciepe_of_day.setAttribute("title", "Hähnchen Döner");
     link_reciepe_of_day.innerText = "Rezept des Tages";
 
     header_links.appendChild(link_reciepe_of_day);
@@ -45,8 +45,8 @@ function loadHeader(isStartpage) {
     header_links.appendChild(link_kontakt);
 
     let link_impressum = document.createElement("a");
-    link_impressum.setAttribute("href", "#");
-    link_impressum.setAttribute("title", "");
+    link_impressum.setAttribute("href", isStartpage ? "./impressum.html" : "../impressum.html");
+    link_impressum.setAttribute("title", "Impressum");
     link_impressum.innerText = "Impressum";
 
     header_links.appendChild(link_impressum);
@@ -58,10 +58,10 @@ function loadFooter(isStartpage) {
     let footer = document.getElementsByTagName("footer");
     footer[0].classList.add("footer");
 
-    let footer_inner = document.createElement("div");
-    footer_inner.classList.add("footer-inner");
+    //let footer_inner = document.createElement("div");
+    //footer_inner.classList.add("footer-inner");
 
-    footer[0].appendChild(footer_inner);
+    //footer[0].appendChild(footer_inner);
 
     let image_logo = document.createElement("img");
     image_logo.classList.add("footer-kochwelt-logo");
@@ -69,46 +69,51 @@ function loadFooter(isStartpage) {
     image_logo.setAttribute("src", isStartpage ? "./assets/img/logo.png" : "../assets/img/logo.png");
     image_logo.setAttribute("alt", "Kochwelt Logo");
 
-    footer_inner.appendChild(image_logo);
+    //footer_inner.appendChild(image_logo);
+    footer[0].appendChild(image_logo);
 
     let sozial_logos = document.createElement("div");
     sozial_logos.classList.add("social-logos");
 
-    footer_inner.appendChild(sozial_logos);
+    //footer_inner.appendChild(sozial_logos);
+    footer[0].appendChild(sozial_logos);
 
     let facebook_link = document.createElement("a");
+    facebook_link.classList.add("sozial-logo-links", "facebook")
     facebook_link.setAttribute("href", "http://facebook.com");
     facebook_link.setAttribute("title", "Link zu Facebook");
     facebook_link.setAttribute("target", "_blank");
 
-    let facebook_image = document.createElement("img");
+    /* let facebook_image = document.createElement("img");
     facebook_image.setAttribute("src", isStartpage ? "./assets/img/find-us-on-facebook-icon.png" : "../assets/img/find-us-on-facebook-icon.png");
     facebook_image.setAttribute("alt", "Facebook");
-    facebook_link.appendChild(facebook_image);
+    facebook_link.appendChild(facebook_image); */
 
     sozial_logos.appendChild(facebook_link);
 
     let instagram_link = document.createElement("a");
+    instagram_link.classList.add("sozial-logo-links", "instagram");
     instagram_link.setAttribute("href", "http://instagram.com");
-    instagram_link.setAttribute("title", "Link zu Facebook");
+    instagram_link.setAttribute("title", "Link zu Instagram");
     instagram_link.setAttribute("target", "_blank");
 
-    let instagram_image = document.createElement("img");
+    /* let instagram_image = document.createElement("img");
     instagram_image.setAttribute("src", isStartpage ? "./assets/img/follow-us-on-instagram-icon.png" : "../assets/img/follow-us-on-instagram-icon.png");
     instagram_image.setAttribute("alt", "Instagramm");
-    instagram_link.appendChild(instagram_image);
+    instagram_link.appendChild(instagram_image); */
     
     sozial_logos.appendChild(instagram_link);
 
     let twitter_link = document.createElement("a");
+    twitter_link.classList.add("sozial-logo-links", "twitter");
     twitter_link.setAttribute("href", "http://twitter.com");
     twitter_link.setAttribute("title", "Link zu Twitter");
     twitter_link.setAttribute("target", "_blank");
 
-    let twitter_image = document.createElement("img");
+    /* let twitter_image = document.createElement("img");
     twitter_image.setAttribute("src", isStartpage ? "./assets/img/follow-us-on-twitter-icon.png" : "../assets/img/follow-us-on-twitter-icon.png");
     twitter_image.setAttribute("alt", "Twitter");
-    twitter_link.appendChild(twitter_image);
+    twitter_link.appendChild(twitter_image); */
     
     sozial_logos.appendChild(twitter_link);
 
@@ -118,4 +123,9 @@ function loadFooter(isStartpage) {
 let rezeptOpen = document.getElementById('rezeptBtn');
 rezeptOpen.addEventListener('click', function(){
     window.open('./recipes-01/recipes-01.html');
-})
+});
+
+
+function toggleRespMenu() {
+    document.getElementById("resp_menu").classList.toggle('resp_menu_close');
+}

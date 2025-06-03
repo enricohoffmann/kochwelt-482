@@ -7,78 +7,77 @@
     <title>Kochwelt</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./assets/img/logo_small.png">
+    <script src="./script.js"></script>
 </head>
 
 <body onload="init(true)">
-    <header></header>
 
-    <section id="franz_crois_section">
-        <img src="../assets/img/haehnchen-doener.webp" alt="haehnchen-doener" id="franz_crois_img" />
-        <div class="franz_crois_right">
-            <h2> Hähnchen Döner</h2>
-            <div class="franz_crois_info">
-                <p>
-                    Schmackhafte Hähnchen-Döner können auch zu Hause sehr einfach gebacken werden: Mit ca. 30 Minuten
-                    Aufwand
-                    kannst du ein wundervolles Früstück zaubern.
+    <div class="content">
+        <header>
+            <button type="button" onclick="toggleRespMenu()">Test</button>
+        </header>
+
+        <div id="resp_menu" class="resp_menu_box resp_menu_close">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </div>
+
+        <section id="franz_crois_section">
+            <img src="./assets/img/haehnchen-doener.webp" alt="haehnchen-doener" id="franz_crois_img" />
+            <div class="franz_crois_right">
+                <h2> Hähnchen Döner</h2>
+                <div class="franz_crois_info">
+                    <p>
+                        Schmackhafte Hähnchen-Döner können auch zu Hause sehr einfach gebacken werden: Mit ca. 30
+                        Minuten
+                        Aufwand
+                        kannst du ein wundervolles Früstück zaubern.
+                    </p>
+                </div>
+                <div>
+                    <button type="button" id="rezeptBtn">Rezept öffnen</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="recipes_section">
+            <h2 class="center_heading">Lust auf etwas neues?</h2>
+            <div id="recipes_container">
+                <a href="#">
+                    <img class="recipes_img" src="./assets/img/croissant.jpg" alt="">
+                    <p class="recipse_title">Frische croissant</p>
+                </a>
+                <a href="#">
+                    <img class="recipes_img" src="./assets/img/croissant.jpg" alt="">
+                    <p class="recipse_title">Frische croissant</p>
+                </a>
+                <a href="./recipes-04/recipes-04.html" title="Rezept 04">
+                    <img class="recipes_img" src="./assets/img/rezept-04-bild.jpg" alt="">
+                    <p class="recipse_title">Mini-Quiches</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="vs_section">
+            <div id="vs_container">
+                <h2 class="center_heading">Pfanne vs. Wok - Was ist beser?</h2>
+                <p class="vs_text"> Loren ipsum dolor sit amet consectetur adipisicing elit. Aspernatur debitis
+                    veritatis
+                    aut,
+                    nemo dolor tempore, sed necessitatibus voluptate pariatur adipisci incidunt odit.
+                    labore ducimus Repellendus ipsa nobis incidunt odit sint.
                 </p>
             </div>
-            <div>
-                <button id="rezeptBtn">Rezept öffnen</button>
-            </div>
-        </div>
-    </section>
+            <img id="vs_img" src="./assets/img/wok.jpg" alt="">
+        </section>
 
-    <section id="recipes_section">
-        <h2 class="center_heading">Lust auf etwas neues?</h2>
-        <div id="recipes_container">
-            <a href="./recipes-02/recipes-02.html">
-                <img class="recipes_img" src="./assets/img/marmorkuchen.jpg" alt="">
-                <p class="recipse_title">Marmorkuchen</p>
-            </a>
-            <a href="#">
-                <img class="recipes_img" src="./assets/img/croissant.jpg" alt="">
-                <p class="recipse_title">Frische croissant</p>
-            </a>
-            <a href="./recipes-04/recipes-04.html" title="Rezept 04">
-                <img class="recipes_img" src="./assets/img/rezept-04-bild.jpg" alt="">
-                <p class="recipse_title">Mini-Quiches</p>
-            </a>
-        </div>
-    </section>
-
-    <section id="vs_section">
-        <div id="vs_container">
-            <h2 class="center_heading">Pfanne vs. Wok - Was ist beser?</h2>
-            <p class="vs_text"> Loren ipsum dolor sit amet consectetur adipisicing elit. Aspernatur debitis veritatis
-                aut,
-                nemo dolor tempore, sed necessitatibus voluptate pariatur adipisci incidunt odit.
-                labore ducimus Repellendus ipsa nobis incidunt odit sint.
-            </p>
-        </div>
-        <img id="vs_img" src="./assets/img/wok.jpg" alt="">
-    </section>
+        <footer></footer>
+    </div>
 
 
-    <!-- <section class="footer">
-        <div class="footer-inner">
-            <img class="footer-kochwelt-logo" src="./assets/img/logo.png" alt="Kochwelt Logo">
-            <div class="social-logos">
-                <a href="http://facebook.com" title="Link zu Facebook" target="_blank" >
-                    <img src="./assets/img/find-us-on-facebook-icon.png" alt="Facebook">
-                </a>
-                <a href="http://instagram.com" target="_blank">
-                    <img src="./assets/img/follow-us-on-instagram-icon.png" alt="Instagram">
-                </a>
-                <a href="http://twitter.com" target="_blank">
-                    <img src="./assets/img/follow-us-on-twitter-icon.png" alt="Twitter">
-                </a>
-            </div>
-        </div>
-    </section> -->
 
-    <footer></footer>
-<script src="./script.js"></script>
 </body>
 
 </html>

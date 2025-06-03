@@ -14,7 +14,7 @@ let portion = 1;
 let minuten = 50;
 
 
-function reciepe04init() {
+function recipe04init() {
 
     reciepeArray = [];
     reciepeArray_number_portion = [];
@@ -125,19 +125,19 @@ function createTable() {
     table_div.innerHTML = "";
 
     let table = document.createElement("table");
-    table.setAttribute("class", "reciepe-table");
-    table.setAttribute("id", "reciepe-table");
+    table.setAttribute("class", "recipe-table");
+    table.setAttribute("id", "recipe-table");
 
     table_div.appendChild(table);
 
-    let table_element = document.getElementById("reciepe-table");
+    let table_element = document.getElementById("recipe-table");
 
     for (let i = 0; i < reciepeArray_number_portion.length; i++) {
         
         let row = document.createElement("tr");
 
         if(i%2 == 0){
-            row.classList.add("reciepe-table-row-even");
+            row.classList.add("recipe-table-row-even");
         }
 
         let tableData = document.createElement("td");
@@ -158,7 +158,7 @@ function createTable() {
 
         let text = document.createTextNode(dataText);
 
-        tableData.classList.add("reciepe-tabledata");
+        tableData.classList.add("recipe-tabledata");
 
         tableData.appendChild(text);
 

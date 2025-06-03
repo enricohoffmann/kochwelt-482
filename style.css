@@ -1,15 +1,15 @@
-
 @font-face {
     font-family: "Raleway";
     src: url(./fonts/Raleway-VariableFont_wght.ttf);
 }
-body{
+
+body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
 }
 
-header{
-    height: 80px ;
+header {
+    height: 80px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -18,13 +18,13 @@ header{
     box-shadow: 0px 4px 5px rgb(211, 210, 210);
 }
 
-.header-logo{
+.header-logo {
     height: 56px;
     margin-left: 24px;
     cursor: pointer;
 }
 
-.header-links{
+.header-links {
     display: flex;
     flex-grow: 0;
     justify-content: space-between;
@@ -33,32 +33,60 @@ header{
     margin-right: 24px;
     margin-bottom: 4px;
 
-    a{
+    a {
         text-decoration: none;
         color: black;
         margin-right: 16px;
         font-weight: 500;
         line-height: 1.6;
-        
+
     }
 
-    a:hover{
+    a:hover {
         color: #008000;
         border-bottom: 4px solid #008000;
-        
+
     }
+}
+
+.content{
+    position: relative;
+    overflow-x: hidden;
+}
+
+.resp_menu_box{
+    background-color: rgb(219, 219, 219);
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+
+    position: absolute;
+    top: 80px;
+    right: 0;
+
+    transition: all 250ms ease-in-out;
+}
+
+.resp_menu_close{
+    transform: translateX(100%);
 }
 
 .footer {
     background-color: #403B3B;
-    height: 300px;
+    height: 128px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
-.footer-inner {
+/* .footer-inner {
     padding: 90px 120px;
     display: flex;
     justify-content: space-between;
-}
+    align-items: center;
+} */
 
 .footer-kochwelt-logo {
     width: 256px;
@@ -71,9 +99,34 @@ header{
     gap: 24px;
 }
 
-.social-logos img {
+.sozial-logo-links {
     width: 220px;
     height: 60px;
+    border-radius: 4px;
+}
+
+.facebook {
+    background-image: url("./assets/img/find-us-on-facebook-icon.png");
+    background-size: 220px;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: center center;
+}
+
+.instagram {
+    background-image: url("./assets/img/follow-us-on-instagram-icon.png");
+    background-size: 220px;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: center center;
+}
+
+.twitter {
+    background-image: url("./assets/img/follow-us-on-twitter-icon.png");
+    background-size: 220px;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: center center;
 }
 
 
@@ -169,4 +222,89 @@ button {
 
 .vs_text {
     font-size: 29px;
+}
+
+
+/***********************************/
+/* Impressum */
+/***********************************/
+
+.impressum-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 36px;
+    max-width: 1440px;
+
+    a:hover{
+        color: rgb(72, 90, 192);
+        font-weight: 500;
+    }
+}
+
+
+
+@media (max-width:1040px) {
+    .facebook {
+        background-image: url("./assets/img/Facebook_Logo_Primary.png");
+        background-size: 40px;
+    }
+
+    .instagram {
+        background-image: url("./assets/img/Instagram_Glyph_Gradient.png");
+        background-size: 40px;
+    }
+
+    .twitter {
+        background-image: url("./assets/img/Twitter_Social_Icon_Circle_Color.png");
+        background-size: 40px;
+    }
+
+    .social-logos {
+        gap: 8px;
+    }
+
+    .sozial-logo-links {
+        width: 60px;
+    }
+}
+
+@media (max-width:650px) {
+    .header-links {
+        display: none;
+    }
+
+    .footer-kochwelt-logo {
+        height: 56px;
+        width: 180px;
+    }
+}
+
+@media(max-width:440px){
+    .footer-kochwelt-logo {
+        width: 112px;
+        height: 32px;
+    }
+
+    .footer{
+        height: 80px;
+    }
+
+    .facebook {
+        background-size: 32px;
+    }
+
+    .instagram {
+        background-size: 32px;
+    }
+
+    .twitter {
+        background-size: 32px;
+    }
+
+    .social-logos {
+        gap: 0px;
+    }
 }
