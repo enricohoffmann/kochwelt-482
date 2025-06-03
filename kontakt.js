@@ -15,11 +15,12 @@ sendMessageBtn.addEventListener('click', function() {
     valideName(name_user);
     valideEmail(email_user);
     valideBetreff(betreff_user);
+    valideMessage(message_user)
 
     console.log(valideEmail);
 
     if(validator == true && check >= 3) {
-        alert(name_user+ email_user+ betreff_user+ message_user);
+        alert(name_user + " " + email_user + " " + betreff_user + " " + message_user);
     }
     else{
         alert("Bitte füllen Sie alle Felder aus");
@@ -33,6 +34,17 @@ function valideName(name){
         validator = false;
     }else{
         Name.classList.add('valideinput');
+        validator = true;
+        check+=1;
+    
+    }
+}
+function valideMessage(message){
+    if(message.length<2 || message.length< 0){
+        Message.classList.add('notvalideinput');
+        validator = false;
+    }else{
+        Message.classList.add('valideinput');
         validator = true;
         check+=1;
     

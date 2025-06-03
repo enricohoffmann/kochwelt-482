@@ -1,6 +1,12 @@
 function init(isStartpage) {
     loadHeader(isStartpage);
     loadFooter(isStartpage);
+
+    
+    let rezeptOpen = document.getElementById('rezeptBtn');
+    rezeptOpen.addEventListener('click', function(){
+        window.open('./recipes-01/recipes-01.html');
+    })
 }
 function loadHeader(isStartpage) {
 
@@ -38,7 +44,7 @@ function loadHeader(isStartpage) {
     header_links.appendChild(link_reciepe_of_day);
 
     let link_kontakt = document.createElement("a");
-    link_kontakt.setAttribute("href", "./kontakt.html");
+    link_kontakt.setAttribute("href", isStartpage ? "./kontakt.html" : "../kontakt.html");
     link_kontakt.setAttribute("title", "");
     link_kontakt.innerText = "Kontakt";
 
@@ -119,8 +125,3 @@ function loadFooter(isStartpage) {
 
 }
 
-
-let rezeptOpen = document.getElementById('rezeptBtn');
-rezeptOpen.addEventListener('click', function(){
-    window.open('./recipes-01/recipes-01.html');
-})

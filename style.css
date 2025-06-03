@@ -6,16 +6,24 @@
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
+
+.content-center-header{
+    background-color: white;
+    box-shadow: 0px 4px 5px rgb(211, 210, 210);
+}
 header {
+    max-width: 1440px;
+    margin: 0 auto;
     height: 80px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    box-shadow: 0px 4px 5px rgb(211, 210, 210);
+
 }
 
 .header-logo {
@@ -49,9 +57,19 @@ header {
     }
 }
 
-.footer {
+.content-center-footer{
     background-color: #403B3B;
-    height: 128px;
+    margin-top: auto;
+    position: relative ;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+
+.footer {
+    max-width: 1440px;
+    margin: 0 auto; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,7 +103,7 @@ header {
 
 .facebook {
     background-image: url("./assets/img/find-us-on-facebook-icon.png");
-    background-size: 220px;
+    background-size: 150px;
     background-repeat: no-repeat;
     object-fit: contain;
     background-position: center center;
@@ -93,7 +111,7 @@ header {
 
 .instagram {
     background-image: url("./assets/img/follow-us-on-instagram-icon.png");
-    background-size: 220px;
+    background-size: 150px;
     background-repeat: no-repeat;
     object-fit: contain;
     background-position: center center;
@@ -101,7 +119,7 @@ header {
 
 .twitter {
     background-image: url("./assets/img/follow-us-on-twitter-icon.png");
-    background-size: 220px;
+    background-size: 150px;
     background-repeat: no-repeat;
     object-fit: contain;
     background-position: center center;
@@ -126,6 +144,8 @@ a {
 }
 
 #franz_crois_section {
+    max-width: 1440px;
+    margin: auto;
     padding: 40px 120px;
     padding-top: 50px;
     padding-bottom: 100px;
@@ -178,14 +198,22 @@ button {
     margin-block-start: 0;
     margin-block-end: 0;
 }
+.content_recipe-center{
+    background-color: #EFEFEF;
+}
+
 
 #recipes_section {
-    background-color: #EFEFEF;
+    max-width: 1440px;
+    margin: auto;
     padding: 40px 120px;
     padding-top: 20px;
 }
 
+
 #vs_section {
+    max-width: 1440px;
+    margin: auto;
     padding: 40px 120px;
     display: flex;
     align-items: center;
