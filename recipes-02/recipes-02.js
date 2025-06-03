@@ -65,4 +65,8 @@ function recipeCalculator(value) {
     let kakaopulverCalc = document.getElementById("kakaopulver");
     kakaopulverCalc.textContent = (20 * value) + " g";
 
+
+    loadHeader(false);
+    loadFooter(false);
 }
+
