@@ -12,13 +12,8 @@ class navLink {
 function init(isStartpage) {
     loadHeader(isStartpage);
     loadFooter(isStartpage);
-
-    
-    let rezeptOpen = document.getElementById('rezeptBtn');
-    rezeptOpen.addEventListener('click', function(){
-        window.open('./recipes-01/recipes-01.html');
-    })
 }
+
 function loadHeader(isStartpage) {
 
     let header = document.getElementsByTagName("header")[0];
@@ -37,10 +32,10 @@ function loadHeader(isStartpage) {
 
 
     let linkArray = [
-        new navLink("Start", isStartpage ? "./index.html" : "../index.html", "Zurück zur Hauptseite", []),
-        new navLink("Rezept des Tages", isStartpage ? "./recipes-01/recipes-01.html" : "../recipes-01/recipes-01.html", "Hähnchen Döner", []),
-        new navLink("Kontakt", isStartpage ? "./kontakt.html" : "../kontakt.html", "Kontaktseite", []),
-        new navLink("Impressum", isStartpage ? "./impressum.html" : "../impressum.html", "Impressumseite", [])
+        new navLink("Start", isStartpage ? "./index.html" : "../index.html", "Zurück zur Hauptseite", ["nav-links"]),
+        new navLink("Rezept des Tages", isStartpage ? "./recipes-01/recipes-01.html" : "../recipes-01/recipes-01.html", "Hähnchen Döner", ["nav-links"]),
+        new navLink("Kontakt", isStartpage ? "./kontakt.html" : "../kontakt.html", "Kontaktseite", ["nav-links"]),
+        new navLink("Impressum", isStartpage ? "./impressum.html" : "../impressum.html", "Impressumseite", ["nav-links"])
     ];
 
 
@@ -48,10 +43,8 @@ function loadHeader(isStartpage) {
 
     header.appendChild(linkDiv);
 
-    
-
-    /* let responsive_button = document.createElement('div');
-    responsive_button.classList.add('resp_button');
+    let responsive_button = document.createElement('div');
+    responsive_button.classList.add('resp_button', 'resp_button_display');
     responsive_button.addEventListener('click', function() {
        toggleRespMenu(); 
     });
@@ -61,18 +54,20 @@ function loadHeader(isStartpage) {
     res_button_image.classList.add('resp_button_img');
 
     responsive_button.appendChild(res_button_image);
-    header_links.appendChild(responsive_button);
+    linkDiv.appendChild(responsive_button);
 
-    let content_Div = document.getElementsByClassName('content');
+    let content_Div = document.getElementsByClassName('content-center-header');
 
-    let resp_menu = document.createElement('div');
-    resp_menu.classList.add('resp_menu_box', 'resp_menu_close');
+    let resp_menu = createLinkDiv(linkArray, ['resp_menu_box', 'resp_menu_close']);
     resp_menu.setAttribute('id', 'resp_menu');
 
     content_Div[0].appendChild(resp_menu);
-    header.after(resp_menu); */
 
 
+}
+
+function toggleRespMenu() {
+    document.getElementById('resp_menu').classList.toggle("resp_menu_close");
 
 }
 
@@ -149,4 +144,8 @@ function createLinkDiv(linkArray, divClasses) {
     }
 
     return div;
+}
+
+function recipe01Open() {
+    window.open("./recipes-01/recipes-01.html", "_self");
 }

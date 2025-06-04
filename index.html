@@ -11,65 +11,71 @@
 </head>
 
 <body onload="init(true)">
-    <div class="content-center-header">
-        <header></header>
-    </div>
 
-    <section id="franz_crois_section">
-        <img src="./assets/img/haehnchen-doener.webp" alt="haehnchen-doener" id="franz_crois_img" />
-        <div class="franz_crois_right">
-            <h2>Hähnchen Döner</h2>
-            <div class="franz_crois_info">
-                <p>
-                    Schmackhafte Hähnchen-Döner können auch zu Hause sehr einfach
-                    gebacken werden: Mit ca. 30 Minuten Aufwand kannst du ein
-                    wundervolles Früstück zaubern.
-                </p>
-            </div>
-            <div>
-                <button id="rezeptBtn">Rezept öffnen</button>
-            </div>
+    <div class="content">
+
+        <div class="content-center-header">
+            <header></header>
         </div>
-    </section>
 
-    <div class="content_recipe-center">
-        <section id="recipes_section">
-            <h2 class="center_heading">Lust auf etwas neues?</h2>
-            <div id="recipes_container">
-                <a href="./recipes-02/recipes-02.html">
-                    <img class="recipes_img" src="./assets/img/marmorkuchen.jpg" alt="">
-                    <p class="recipse_title">Marmorkuchen</p>
-                </a>
-                <a href="/recipes-03/recipes-03.html">
-                    <img class="recipes_img" src="./assets/img/rezept_3_img.jpg" alt="" />
-                    <p class="recipse_title">Hähnchengeschnetzeltes mit Reis</p>
-
-                </a>
-                <a href="./recipes-04/recipes-04.html" title="Rezept 04">
-                    <img class="recipes_img" src="./assets/img/rezept-04-bild.jpg" alt="" />
-                    <p class="recipse_title">Mini-Quiches</p>
-                </a>
+        <section id="franz_crois_section">
+            <img src="./assets/img/haehnchen-doener.webp" alt="haehnchen-doener" id="franz_crois_img" />
+            <div class="franz_crois_right">
+                <h2>Hähnchen Döner</h2>
+                <div class="franz_crois_info">
+                    <p>
+                        Schmackhafte Hähnchen-Döner können auch zu Hause sehr einfach
+                        gebacken werden: Mit ca. 30 Minuten Aufwand kannst du ein
+                        wundervolles Früstück zaubern.
+                    </p>
+                </div>
+                <div>
+                    <button type="button" onclick="recipe01Open()">Rezept öffnen</button>
+                </div>
             </div>
         </section>
-    </div>
 
-    <section id="vs_section">
-        <div id="vs_container">
-            <h2 class="center_heading">Pfanne vs. Wok - Was ist beser?</h2>
-            <p class="vs_text">
-                Loren ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-                debitis veritatis aut, nemo dolor tempore, sed necessitatibus
-                voluptate pariatur adipisci incidunt odit. labore ducimus Repellendus
-                ipsa nobis incidunt odit sint.
-            </p>
+        <div class="content_recipe-center">
+            <section id="recipes_section">
+                <h2 class="center_heading">Lust auf etwas neues?</h2>
+                <div id="recipes_container">
+                    <a href="./recipes-02/recipes-02.html">
+                        <img class="recipes_img" src="./assets/img/marmorkuchen.jpg" alt="">
+                        <p class="recipse_title">Marmorkuchen</p>
+                    </a>
+                    <a href="/recipes-03/recipes-03.html">
+                        <img class="recipes_img" src="./assets/img/rezept_3_img.jpg" alt="" />
+                        <p class="recipse_title">Hähnchengeschnetzeltes mit Reis</p>
+
+                    </a>
+                    <a href="./recipes-04/recipes-04.html" title="Rezept 04">
+                        <img class="recipes_img" src="./assets/img/rezept-04-bild.jpg" alt="" />
+                        <p class="recipse_title">Mini-Quiches</p>
+                    </a>
+                </div>
+            </section>
         </div>
-        <img id="vs_img" src="./assets/img/wok.jpg" alt="" />
-    </section>
+
+        <section id="vs_section">
+            <div id="vs_container">
+                <h2 class="center_heading">Pfanne vs. Wok - Was ist beser?</h2>
+                <p class="vs_text">
+                    Loren ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+                    debitis veritatis aut, nemo dolor tempore, sed necessitatibus
+                    voluptate pariatur adipisci incidunt odit. labore ducimus Repellendus
+                    ipsa nobis incidunt odit sint.
+                </p>
+            </div>
+            <img id="vs_img" src="./assets/img/wok.jpg" alt="" />
+        </section>
 
 
-    <div class="content-center-footer">
-        <footer></footer>
+        <div class="content-center-footer">
+            <footer></footer>
+        </div>
+
     </div>
+
 </body>
 
 </html>
