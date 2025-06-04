@@ -1,3 +1,14 @@
+
+class navLink {
+    constructor(linkText, linkHref, linkAlt, linkClasses) {
+        this.linkText = linkText;
+        this.linkHref = linkHref;
+        this.linkAlt = linkAlt;
+        this.linkClasses = linkClasses;
+    };
+};
+
+
 function init(isStartpage) {
     loadHeader(isStartpage);
     loadFooter(isStartpage);
@@ -24,42 +35,21 @@ function loadHeader(isStartpage) {
 
     header.appendChild(logo_link);
 
+
+    let linkArray = [
+        new navLink("Start", isStartpage ? "./index.html" : "../index.html", "Zurück zur Hauptseite", []),
+        new navLink("Rezept des Tages", isStartpage ? "./recipes-01/recipes-01.html" : "../recipes-01/recipes-01.html", "Hähnchen Döner", []),
+        new navLink("Kontakt", isStartpage ? "./kontakt.html" : "../kontakt.html", "Kontaktseite", []),
+        new navLink("Impressum", isStartpage ? "./impressum.html" : "../impressum.html", "Impressumseite", [])
+    ];
+
+
     let header_links = document.createElement("div");
     header_links.classList.add("header-links");
 
     header.appendChild(header_links);
 
-    let link_start = document.createElement("a");
-    link_start.setAttribute("href", isStartpage ? "./index.html" : "../index.html");
-    link_start.setAttribute("title", "Zurück zur Hauptseite");
-    link_start.innerText = "Start";
-
-    header_links.appendChild(link_start);
-
-    let link_reciepe_of_day = document.createElement("a");
-    link_reciepe_of_day.setAttribute("href", isStartpage ? "./recipes-01/recipes-01.html" : "../recipes-01/recipes-01.html");
-    link_reciepe_of_day.setAttribute("title", "Hähnchen Döner");
-    link_reciepe_of_day.setAttribute("href", isStartpage ? "./recipes-01/recipes-01.html" : "../recipes-01/recipes-01.html");
-    link_reciepe_of_day.setAttribute("title", "Hähnchen Döner");
-    link_reciepe_of_day.innerText = "Rezept des Tages";
-
-    header_links.appendChild(link_reciepe_of_day);
-
-    let link_kontakt = document.createElement("a");
-    link_kontakt.setAttribute("href", isStartpage ? "./kontakt.html" : "../kontakt.html");
-    link_kontakt.setAttribute("title", "");
-    link_kontakt.innerText = "Kontakt";
-
-    header_links.appendChild(link_kontakt);
-
-    let link_impressum = document.createElement("a");
-    link_impressum.setAttribute("href", isStartpage ? "./impressum.html" : "../impressum.html");
-    link_impressum.setAttribute("title", "Impressum");
-    link_impressum.setAttribute("href", isStartpage ? "./impressum.html" : "../impressum.html");
-    link_impressum.setAttribute("title", "Impressum");
-    link_impressum.innerText = "Impressum";
-
-    header_links.appendChild(link_impressum);
+    
 
     /* let responsive_button = document.createElement('div');
     responsive_button.classList.add('resp_button');
@@ -157,4 +147,31 @@ function loadFooter(isStartpage) {
     sozial_logos.appendChild(twitter_link);
 
 
+}
+
+function createLinkDiv(linkArray, divClasses) {
+    let div = document.createElement('div');
+
+    for (let c = 0; c < divClasses.length; c++) {
+        div.classList.add(divClasses[c]);        
+    }
+
+
+    for (let i = 0; i < linkArray.length; i++) {
+        const element = linkArray[index];
+        
+        let link = document.createElement('a');
+        link.setAttribute("href", element.linkHref);
+        link.setAttribute("title", element.linkAlt);
+        link.setAttribute.innerText = element.linkText;
+
+        for (let c = 0; c < element.linkClasses.length; c++) {
+            link.classList.add(element.linkClasses[c]);            
+        }
+
+        div.appendChild(link);
+
+    }
+
+    return div;
 }
