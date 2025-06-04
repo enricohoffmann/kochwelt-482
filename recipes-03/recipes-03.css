@@ -32,6 +32,11 @@ input {
 table {
     width: 100%;
     font-size: 20px;
+    padding-top: 20px;
+}
+
+tr {
+    height: 50px;
 }
 
 #profile_img {
@@ -42,4 +47,5 @@ table {
 #profile_container {
     display: flex;
     align-items: center;
+    gap: 30px;
 }
