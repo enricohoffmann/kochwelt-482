@@ -44,10 +44,9 @@ function loadHeader(isStartpage) {
     ];
 
 
-    let header_links = document.createElement("div");
-    header_links.classList.add("header-links");
+    let linkDiv = createLinkDiv(linkArray, ["header-links"]);
 
-    header.appendChild(header_links);
+    header.appendChild(linkDiv);
 
     
 
@@ -83,24 +82,17 @@ function loadFooter(isStartpage) {
     let footer = document.getElementsByTagName("footer");
     footer[0].classList.add("footer");
 
-    //let footer_inner = document.createElement("div");
-    //footer_inner.classList.add("footer-inner");
-
-    //footer[0].appendChild(footer_inner);
-
     let image_logo = document.createElement("img");
     image_logo.classList.add("footer-kochwelt-logo");
 
     image_logo.setAttribute("src", isStartpage ? "./assets/img/logo.png" : "../assets/img/logo.png");
     image_logo.setAttribute("alt", "Kochwelt Logo");
 
-    //footer_inner.appendChild(image_logo);
     footer[0].appendChild(image_logo);
 
     let sozial_logos = document.createElement("div");
     sozial_logos.classList.add("social-logos");
 
-    //footer_inner.appendChild(sozial_logos);
     footer[0].appendChild(sozial_logos);
 
     let facebook_link = document.createElement("a");
@@ -109,11 +101,6 @@ function loadFooter(isStartpage) {
     facebook_link.setAttribute("href", "http://facebook.com");
     facebook_link.setAttribute("title", "Link zu Facebook");
     facebook_link.setAttribute("target", "_blank");
-
-    /* let facebook_image = document.createElement("img");
-    facebook_image.setAttribute("src", isStartpage ? "./assets/img/find-us-on-facebook-icon.png" : "../assets/img/find-us-on-facebook-icon.png");
-    facebook_image.setAttribute("alt", "Facebook");
-    facebook_link.appendChild(facebook_image); */
 
     sozial_logos.appendChild(facebook_link);
 
@@ -124,11 +111,6 @@ function loadFooter(isStartpage) {
     instagram_link.setAttribute("title", "Link zu Instagram");
     instagram_link.setAttribute("title", "Link zu Instagram");
     instagram_link.setAttribute("target", "_blank");
-
-    /* let instagram_image = document.createElement("img");
-    instagram_image.setAttribute("src", isStartpage ? "./assets/img/follow-us-on-instagram-icon.png" : "../assets/img/follow-us-on-instagram-icon.png");
-    instagram_image.setAttribute("alt", "Instagramm");
-    instagram_link.appendChild(instagram_image); */
     
     sozial_logos.appendChild(instagram_link);
 
@@ -138,15 +120,8 @@ function loadFooter(isStartpage) {
     twitter_link.setAttribute("href", "http://twitter.com");
     twitter_link.setAttribute("title", "Link zu Twitter");
     twitter_link.setAttribute("target", "_blank");
-
-    /* let twitter_image = document.createElement("img");
-    twitter_image.setAttribute("src", isStartpage ? "./assets/img/follow-us-on-twitter-icon.png" : "../assets/img/follow-us-on-twitter-icon.png");
-    twitter_image.setAttribute("alt", "Twitter");
-    twitter_link.appendChild(twitter_image); */
-    
+   
     sozial_logos.appendChild(twitter_link);
-
-
 }
 
 function createLinkDiv(linkArray, divClasses) {
@@ -158,12 +133,12 @@ function createLinkDiv(linkArray, divClasses) {
 
 
     for (let i = 0; i < linkArray.length; i++) {
-        const element = linkArray[index];
+        const element = linkArray[i];
         
         let link = document.createElement('a');
         link.setAttribute("href", element.linkHref);
         link.setAttribute("title", element.linkAlt);
-        link.setAttribute.innerText = element.linkText;
+        link.innerText = element.linkText;
 
         for (let c = 0; c < element.linkClasses.length; c++) {
             link.classList.add(element.linkClasses[c]);            
