@@ -1,3 +1,14 @@
+
+class navLink {
+    constructor(linkText, linkHref, linkAlt, linkClasses) {
+        this.linkText = linkText;
+        this.linkHref = linkHref;
+        this.linkAlt = linkAlt;
+        this.linkClasses = linkClasses;
+    };
+};
+
+
 function init(isStartpage) {
     loadHeader(isStartpage);
     loadFooter(isStartpage);
@@ -24,42 +35,20 @@ function loadHeader(isStartpage) {
 
     header.appendChild(logo_link);
 
-    let header_links = document.createElement("div");
-    header_links.classList.add("header-links");
 
-    header.appendChild(header_links);
+    let linkArray = [
+        new navLink("Start", isStartpage ? "./index.html" : "../index.html", "Zurück zur Hauptseite", []),
+        new navLink("Rezept des Tages", isStartpage ? "./recipes-01/recipes-01.html" : "../recipes-01/recipes-01.html", "Hähnchen Döner", []),
+        new navLink("Kontakt", isStartpage ? "./kontakt.html" : "../kontakt.html", "Kontaktseite", []),
+        new navLink("Impressum", isStartpage ? "./impressum.html" : "../impressum.html", "Impressumseite", [])
+    ];
 
-    let link_start = document.createElement("a");
-    link_start.setAttribute("href", isStartpage ? "./index.html" : "../index.html");
-    link_start.setAttribute("title", "Zurück zur Hauptseite");
-    link_start.innerText = "Start";
 
-    header_links.appendChild(link_start);
+    let linkDiv = createLinkDiv(linkArray, ["header-links"]);
 
-    let link_reciepe_of_day = document.createElement("a");
-    link_reciepe_of_day.setAttribute("href", isStartpage ? "./recipes-01/recipes-01.html" : "../recipes-01/recipes-01.html");
-    link_reciepe_of_day.setAttribute("title", "Hähnchen Döner");
-    link_reciepe_of_day.setAttribute("href", isStartpage ? "./recipes-01/recipes-01.html" : "../recipes-01/recipes-01.html");
-    link_reciepe_of_day.setAttribute("title", "Hähnchen Döner");
-    link_reciepe_of_day.innerText = "Rezept des Tages";
+    header.appendChild(linkDiv);
 
-    header_links.appendChild(link_reciepe_of_day);
-
-    let link_kontakt = document.createElement("a");
-    link_kontakt.setAttribute("href", isStartpage ? "./kontakt.html" : "../kontakt.html");
-    link_kontakt.setAttribute("title", "");
-    link_kontakt.innerText = "Kontakt";
-
-    header_links.appendChild(link_kontakt);
-
-    let link_impressum = document.createElement("a");
-    link_impressum.setAttribute("href", isStartpage ? "./impressum.html" : "../impressum.html");
-    link_impressum.setAttribute("title", "Impressum");
-    link_impressum.setAttribute("href", isStartpage ? "./impressum.html" : "../impressum.html");
-    link_impressum.setAttribute("title", "Impressum");
-    link_impressum.innerText = "Impressum";
-
-    header_links.appendChild(link_impressum);
+    
 
     /* let responsive_button = document.createElement('div');
     responsive_button.classList.add('resp_button');
@@ -93,24 +82,17 @@ function loadFooter(isStartpage) {
     let footer = document.getElementsByTagName("footer");
     footer[0].classList.add("footer");
 
-    //let footer_inner = document.createElement("div");
-    //footer_inner.classList.add("footer-inner");
-
-    //footer[0].appendChild(footer_inner);
-
     let image_logo = document.createElement("img");
     image_logo.classList.add("footer-kochwelt-logo");
 
     image_logo.setAttribute("src", isStartpage ? "./assets/img/logo.png" : "../assets/img/logo.png");
     image_logo.setAttribute("alt", "Kochwelt Logo");
 
-    //footer_inner.appendChild(image_logo);
     footer[0].appendChild(image_logo);
 
     let sozial_logos = document.createElement("div");
     sozial_logos.classList.add("social-logos");
 
-    //footer_inner.appendChild(sozial_logos);
     footer[0].appendChild(sozial_logos);
 
     let facebook_link = document.createElement("a");
@@ -119,11 +101,6 @@ function loadFooter(isStartpage) {
     facebook_link.setAttribute("href", "http://facebook.com");
     facebook_link.setAttribute("title", "Link zu Facebook");
     facebook_link.setAttribute("target", "_blank");
-
-    /* let facebook_image = document.createElement("img");
-    facebook_image.setAttribute("src", isStartpage ? "./assets/img/find-us-on-facebook-icon.png" : "../assets/img/find-us-on-facebook-icon.png");
-    facebook_image.setAttribute("alt", "Facebook");
-    facebook_link.appendChild(facebook_image); */
 
     sozial_logos.appendChild(facebook_link);
 
@@ -134,11 +111,6 @@ function loadFooter(isStartpage) {
     instagram_link.setAttribute("title", "Link zu Instagram");
     instagram_link.setAttribute("title", "Link zu Instagram");
     instagram_link.setAttribute("target", "_blank");
-
-    /* let instagram_image = document.createElement("img");
-    instagram_image.setAttribute("src", isStartpage ? "./assets/img/follow-us-on-instagram-icon.png" : "../assets/img/follow-us-on-instagram-icon.png");
-    instagram_image.setAttribute("alt", "Instagramm");
-    instagram_link.appendChild(instagram_image); */
     
     sozial_logos.appendChild(instagram_link);
 
@@ -148,13 +120,33 @@ function loadFooter(isStartpage) {
     twitter_link.setAttribute("href", "http://twitter.com");
     twitter_link.setAttribute("title", "Link zu Twitter");
     twitter_link.setAttribute("target", "_blank");
-
-    /* let twitter_image = document.createElement("img");
-    twitter_image.setAttribute("src", isStartpage ? "./assets/img/follow-us-on-twitter-icon.png" : "../assets/img/follow-us-on-twitter-icon.png");
-    twitter_image.setAttribute("alt", "Twitter");
-    twitter_link.appendChild(twitter_image); */
-    
+   
     sozial_logos.appendChild(twitter_link);
+}
+
+function createLinkDiv(linkArray, divClasses) {
+    let div = document.createElement('div');
+
+    for (let c = 0; c < divClasses.length; c++) {
+        div.classList.add(divClasses[c]);        
+    }
 
 
+    for (let i = 0; i < linkArray.length; i++) {
+        const element = linkArray[i];
+        
+        let link = document.createElement('a');
+        link.setAttribute("href", element.linkHref);
+        link.setAttribute("title", element.linkAlt);
+        link.innerText = element.linkText;
+
+        for (let c = 0; c < element.linkClasses.length; c++) {
+            link.classList.add(element.linkClasses[c]);            
+        }
+
+        div.appendChild(link);
+
+    }
+
+    return div;
 }
