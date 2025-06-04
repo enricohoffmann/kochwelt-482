@@ -77,6 +77,8 @@ function loadFooter(isStartpage) {
     let footer = document.getElementsByTagName("footer");
     footer[0].classList.add("footer");
 
+    
+
     let image_logo = document.createElement("img");
     image_logo.classList.add("footer-kochwelt-logo");
 
@@ -84,6 +86,11 @@ function loadFooter(isStartpage) {
     image_logo.setAttribute("alt", "Kochwelt Logo");
 
     footer[0].appendChild(image_logo);
+
+    let logo_div = document.createElement('div');
+    logo_div.classList.add('footer-mid-container');
+
+    footer[0].appendChild(logo_div);
 
     let sozial_logos = document.createElement("div");
     sozial_logos.classList.add("social-logos");

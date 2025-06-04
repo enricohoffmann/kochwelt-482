@@ -141,6 +141,9 @@ header {
     padding-right: 24px;
 }
 
+.footer-mid-container{
+    flex: 1;
+}
 
 .footer-kochwelt-logo {
     width: 256px;
@@ -311,6 +314,12 @@ button {
     }
 }
 
+@media(max-width:1500px){
+    .impressum-container{
+        margin-left: 36px;
+        margin-right: 36px;
+    }
+}
 
 
 @media (max-width:1040px) {
@@ -351,6 +360,7 @@ button {
         height: 56px;
         width: 180px;
     }
+
 }
 
 @media(max-width:440px) {
@@ -363,16 +373,23 @@ button {
         height: 80px;
     }
 
+    .sozial-logo-links {
+        width: 40px;
+    }
+
     .facebook {
         background-size: 32px;
+        margin-right: 8px;
     }
 
     .instagram {
         background-size: 32px;
+        margin-right: 8px;
     }
 
     .twitter {
         background-size: 32px;
+        margin-right: 0;
     }
 
     .social-logos {
