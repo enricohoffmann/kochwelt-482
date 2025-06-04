@@ -141,13 +141,6 @@ header {
     padding-right: 24px;
 }
 
-/* .footer-inner {
-/* .footer-inner {
-    padding: 90px 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
 
 .footer-kochwelt-logo {
     width: 256px;
@@ -156,14 +149,16 @@ header {
 
 .social-logos {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    gap: 24px;
+    flex: 1;
 }
 
 .sozial-logo-links {
-    width: 220px;
+    width: 150px;
     height: 60px;
     border-radius: 4px;
+    margin-right: 16px;
 }
 
 .facebook {
@@ -184,7 +179,7 @@ header {
 
 .twitter {
     background-image: url("./assets/img/follow-us-on-twitter-icon.png");
-    background-size: 150px;
+    background-size: 140px;
     background-repeat: no-repeat;
     object-fit: contain;
     background-position: center center;
