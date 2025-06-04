@@ -9,6 +9,7 @@ body {
 #img {
     width: 100%;
     height: 200px;
+    border-radius: 8px;
 }
 
 .icons {
@@ -25,6 +26,7 @@ input {
     font-size: 25px;
 }
 
+
 .background_grey {
     background-color: #efefef;
 }
@@ -37,7 +39,9 @@ table {
 
 tr {
     height: 50px;
+    border-radius: 5px;
 }
+
 
 #profile_img {
     border-radius: 100%;
