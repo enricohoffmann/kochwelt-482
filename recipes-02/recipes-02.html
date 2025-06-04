@@ -14,149 +14,150 @@
 
 <body class="mybody" onload="recipeCalculator(1)">
 
-    <div class="content-center-header">
-        <header></header>
-    </div>
-    <!-- <header class="header">
-        <a href="../index.html">
-            <img class="kochwelt-logo-top" src="../assets/logo.png">
-        </a>
-        <nav class="menu">
-            <a href="../index.html">Start</a>
-            <a href="#">Rezept des Tages</a>
-            <a href="#">Kontakt</a>
-            <a href="#">Impressum</a>
-        </nav>
-    </header> -->
+    <div class="content">
 
-    <div class="main">
-        <section class="title">
-            <h1>Marmorkuchen</h1>
-            <img class="title-image" src="../assets/img/marmorkuchen.jpg" alt="Marmorkuchen">
-        </section>
-
-        <section class="data-up">
-            <span class="preparation-time">
-                <img src="../assets/icons/clock-regular.svg">
-                <a>30 Min.</a>
-            </span>
-            <span class="preparation-time">
-                <img src="../assets/icons/brain-solid.svg">
-                <a>normal</a>
-            </span>
-            <span class="preparation-time">
-                <img src="../assets/icons/calendar-alt-regular.svg">
-                <a>31.05.2025</a>
-            </span>
-        </section>
-
-        <section class="ingredients">
-            <p>Zutaten für </p>
-            <input id="portion-input-calc" class="portion-input" value="1" min="0" max="20" type="number"
-                placeholder="Anzahl der Personen">
-            <button class="button" onclick="checkportion()">Portionen</button>
-        </section>
-        <p id="errorIngredients" class="error dNone">Die Eingabe war ungültig. Es werden nur Zahlen zwischen 1 und 20
-            akzeptiert.</p>
-
-        <section class="recipe-container">
-            <table>
-
-                <tr class="background-grey row-style">
-                    <td id="butter"></td>
-                    <td>Butter, weiche</td>
-                </tr>
-                <tr class="background-white row-style">
-                    <td id="zucker1"></td>
-                    <td>Zucker</td>
-                </tr>
-                <tr class="background-grey row-style">
-                    <td id="vanillezucker"></td>
-                    <td>Vanillezucker</td>
-                </tr>
-                <tr class="background-white row-style">
-                    <td id="zitrone"></td>
-                    <td>Zitronenabrieb</td>
-                </tr>
-                <tr class="background-grey row-style">
-                    <td id="eigelb"></td>
-                    <td>Eigelb</td>
-                </tr>
-                <tr class="background-white row-style">
-                    <td id="eiweiss"></td>
-                    <td>Eiweiß</td>
-                </tr>
-                <tr class="background-grey row-style">
-                    <td id="salz"></td>
-                    <td>Salz</td>
-                </tr>
-                <tr class="background-white row-style">
-                    <td id="zucker2"></td>
-                    <td>Zucker</td>
-                </tr>
-                <tr class="background-grey row-style">
-                    <td id="mehl"></td>
-                    <td>Weizenmehl</td>
-                </tr>
-                <tr class="background-white row-style">
-                    <td id="backpulver"></td>
-                    <td>Backpulver</td>
-                </tr>
-                <tr class="background-grey row-style">
-                    <td id="milch"></td>
-                    <td>Milch, lauwarm</td>
-                </tr>
-                <tr class="background-white row-style">
-                    <td id="kakaopulver"></td>
-                    <td>Kakaopulver</td>
-                </tr>
-            </table>
-        </section>
-
-        <section class="preparation">
-            <h2>Zubereitung</h2>
-            <div class="data-bottom">
-                <span class="preparation-time">
-                    <img src="../assets/icons/clock-regular.svg">
-                    <a>Arbeitszeit 30 Min.</a>
-                </span>
-                <span class="preparation-time">
-                    <img src="../assets/icons/clock-regular.svg">
-                    <a>Koch-/Backzeit 1 Std.</a>
-                </span>
-            </div>
-
-            <p>Die wirklich weiche Butter mit Zucker und Vanillezucker sowie etwas Zitronenabrieb cremig rühren.</p>
-            <p>Eier trennen. Die Eidotter einzeln nacheinander in die Butter-Zucker-Masse rühren. Die 6 Eiweiße mit
-                der
-                Msp. Salz halbfest schlagen und mit den restlichen 120 g Zucker zu Schnee schlagen.</p>
-            <p>Mehl abwiegen, mit Backpulver mischen. Milch leicht anwärmen. Abwechselnd (etwa in 3 - 4 Schritten)
-                zuerst etwas Mehl auf die Butter-Zucker-Eidotter-Masse sieben, dann etwas lauwarme Milch dazugießen und
-                eine Portion Eischnee darauf geben. Mit einem Holzlöffel, der idealerweise in der Mitte ein Loch hat,
-                alles unterheben.
-            </p>
-            <p>Wenn alles untergehoben und sorgfältig vermischt ist, die Kuchenform gut mit Butter ausstreichen und mit
-                Mehl bestäuben. Gut die Hälfte des Teigs in die Form füllen.</p>
-            <p>Den restlichen Teig mit dem Kakaopulver dunkel färben. Dazu das Kakaopulver in die verbliebene Teigmasse
-                sieben, um Klümpchen zu verhindern. Klassisch ist einfach das dunkle Kakaopulver, wie es von unseren
-                Großmüttern früher verwendet wurde.</p>
-            <p>Den dunklen Teig auf die helle Teigmasse in die Form füllen und mit einer Gabel spiralförmig unterziehen.
-                Beide Teigsorten vermischen sich dadurch zum Marmormuster.</p>
-            <p>Im vorgeheizten Backofen bei 150 - 160 °C Umluft (180 °C Ober-/Unterhitze) ca. 60 Minuten backen. Er soll
-                jedenfalls keine zu harte Kruste kriegen und eher heller backen, damit er auf keinen Fall trocken wird.
-                Man sollte natürlich die Stäbchenprobe machen.</p>
-            <p>Den Kuchen in der Form leicht auskühlen lassen und dann auf ein Kuchengitter stürzen.</p>
-        </section>
-
-        <h3>Rezept erstellt von</h3>
-        <div class="profil">
-            <img src="../assets/img/profile.png" alt="Osman Annak">
-            <p>Osman Annak</p>
+        <div class="content-center-header">
+            <header></header>
         </div>
 
-    </div>
-    <div class="content-center-footer">
-        <footer></footer>
+        <div class="main">
+            <section class="title">
+                <h1>Marmorkuchen</h1>
+                <img class="title-image" src="../assets/img/marmorkuchen.jpg" alt="Marmorkuchen">
+            </section>
+
+            <section class="data-up">
+                <span class="preparation-time">
+                    <img src="../assets/icons/clock-regular.svg">
+                    <a>30 Min.</a>
+                </span>
+                <span class="preparation-time">
+                    <img src="../assets/icons/brain-solid.svg">
+                    <a>normal</a>
+                </span>
+                <span class="preparation-time">
+                    <img src="../assets/icons/calendar-alt-regular.svg">
+                    <a>31.05.2025</a>
+                </span>
+            </section>
+
+            <section class="ingredients">
+                <p>Zutaten für </p>
+                <input id="portion-input-calc" class="portion-input" value="1" min="0" max="20" type="number"
+                    placeholder="Anzahl der Personen">
+                <button class="button" onclick="checkportion()">Portionen</button>
+            </section>
+            <p id="errorIngredients" class="error dNone">Die Eingabe war ungültig. Es werden nur Zahlen zwischen 1 und
+                20
+                akzeptiert.</p>
+
+            <section class="recipe-container">
+                <table>
+
+                    <tr class="background-grey row-style">
+                        <td id="butter"></td>
+                        <td>Butter, weiche</td>
+                    </tr>
+                    <tr class="background-white row-style">
+                        <td id="zucker1"></td>
+                        <td>Zucker</td>
+                    </tr>
+                    <tr class="background-grey row-style">
+                        <td id="vanillezucker"></td>
+                        <td>Vanillezucker</td>
+                    </tr>
+                    <tr class="background-white row-style">
+                        <td id="zitrone"></td>
+                        <td>Zitronenabrieb</td>
+                    </tr>
+                    <tr class="background-grey row-style">
+                        <td id="eigelb"></td>
+                        <td>Eigelb</td>
+                    </tr>
+                    <tr class="background-white row-style">
+                        <td id="eiweiss"></td>
+                        <td>Eiweiß</td>
+                    </tr>
+                    <tr class="background-grey row-style">
+                        <td id="salz"></td>
+                        <td>Salz</td>
+                    </tr>
+                    <tr class="background-white row-style">
+                        <td id="zucker2"></td>
+                        <td>Zucker</td>
+                    </tr>
+                    <tr class="background-grey row-style">
+                        <td id="mehl"></td>
+                        <td>Weizenmehl</td>
+                    </tr>
+                    <tr class="background-white row-style">
+                        <td id="backpulver"></td>
+                        <td>Backpulver</td>
+                    </tr>
+                    <tr class="background-grey row-style">
+                        <td id="milch"></td>
+                        <td>Milch, lauwarm</td>
+                    </tr>
+                    <tr class="background-white row-style">
+                        <td id="kakaopulver"></td>
+                        <td>Kakaopulver</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section class="preparation">
+                <h2>Zubereitung</h2>
+                <div class="data-bottom">
+                    <span class="preparation-time">
+                        <img src="../assets/icons/clock-regular.svg">
+                        <a>Arbeitszeit 30 Min.</a>
+                    </span>
+                    <span class="preparation-time">
+                        <img src="../assets/icons/clock-regular.svg">
+                        <a>Koch-/Backzeit 1 Std.</a>
+                    </span>
+                </div>
+
+                <p>Die wirklich weiche Butter mit Zucker und Vanillezucker sowie etwas Zitronenabrieb cremig rühren.</p>
+                <p>Eier trennen. Die Eidotter einzeln nacheinander in die Butter-Zucker-Masse rühren. Die 6 Eiweiße mit
+                    der
+                    Msp. Salz halbfest schlagen und mit den restlichen 120 g Zucker zu Schnee schlagen.</p>
+                <p>Mehl abwiegen, mit Backpulver mischen. Milch leicht anwärmen. Abwechselnd (etwa in 3 - 4 Schritten)
+                    zuerst etwas Mehl auf die Butter-Zucker-Eidotter-Masse sieben, dann etwas lauwarme Milch dazugießen
+                    und
+                    eine Portion Eischnee darauf geben. Mit einem Holzlöffel, der idealerweise in der Mitte ein Loch
+                    hat,
+                    alles unterheben.
+                </p>
+                <p>Wenn alles untergehoben und sorgfältig vermischt ist, die Kuchenform gut mit Butter ausstreichen und
+                    mit
+                    Mehl bestäuben. Gut die Hälfte des Teigs in die Form füllen.</p>
+                <p>Den restlichen Teig mit dem Kakaopulver dunkel färben. Dazu das Kakaopulver in die verbliebene
+                    Teigmasse
+                    sieben, um Klümpchen zu verhindern. Klassisch ist einfach das dunkle Kakaopulver, wie es von unseren
+                    Großmüttern früher verwendet wurde.</p>
+                <p>Den dunklen Teig auf die helle Teigmasse in die Form füllen und mit einer Gabel spiralförmig
+                    unterziehen.
+                    Beide Teigsorten vermischen sich dadurch zum Marmormuster.</p>
+                <p>Im vorgeheizten Backofen bei 150 - 160 °C Umluft (180 °C Ober-/Unterhitze) ca. 60 Minuten backen. Er
+                    soll
+                    jedenfalls keine zu harte Kruste kriegen und eher heller backen, damit er auf keinen Fall trocken
+                    wird.
+                    Man sollte natürlich die Stäbchenprobe machen.</p>
+                <p>Den Kuchen in der Form leicht auskühlen lassen und dann auf ein Kuchengitter stürzen.</p>
+            </section>
+
+            <h3>Rezept erstellt von</h3>
+            <div class="profil">
+                <img src="../assets/img/profile.png" alt="Osman Annak">
+                <p>Osman Annak</p>
+            </div>
+
+        </div>
+        <div class="content-center-footer">
+            <footer></footer>
+        </div>
+
     </div>
 </body>
 
