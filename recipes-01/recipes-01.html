@@ -23,32 +23,34 @@
     <main class="main_rezept">
       <div class="banner">
         <h2 class="title2">Hähnchen-Döner</h2>
-        <img src="../assets/img/haehnchen-doener.webp" alt="haehnchen-doener" />
-        <p>
-          <span><i class="fa-regular fa-clock"></i>15min</span>
-          <span><i class="fa-solid fa-brain"></i></i>simple</span>
-          <span><i class="fa-solid fa-calendar"></i>31.05.2025</span>
-          <span><i class="fa-solid fa-chart-column"></i>393kcal</span>
-        </p>
+        <img src="../assets/img/haehnchen-doener.webp" alt="haehnchen-doener" class="banner_img" />
+        <div class="banner_icons">
+          <p><img src="../assets/icons/clock-regular.svg" alt="clock icon"><span>15min</span></p>
+          <p><img src="../assets/icons/brain-solid.svg" alt="brain icon"><span>simple</span></p>
+          <p><img src="../assets/icons/calendar-alt-regular.svg" alt="calendar icon"><span>31.05.2025</span></p>
+          <p><img src="../assets/icons/bars-solid.svg" alt="bar icon"><span>393kcal</span></p>
+        </div>
       </div>
-      <div class="form">
-        Zutaten für
-        <input type="number" name="portion" id="portion_number" value="1" min="1" />
-        <button id="portion_calculateBtn">Portionen</button>
+     <div class="form_rezept">
+        <p> Zutaten für </p>
+          <div class="calculate">
+            <input type="number" name="portion" id="portion_number" value="1" min="1"/>
+            <button id="portion_calculateBtn">Portionen</button>
+          </div>
       </div>
       <table id="ingredient_table" class="ingredient_table">
         <tr>
-          <td></td>
+
         </tr>
 
       </table>
 
       <div class="zubereitung">
         <h3 class="title3">Zubereitung</h3>
-        <p>
-          <span><i class="fa-regular fa-clock"></i>ca. 15 minuten</span>
-          <span><i class="fa-regular fa-clock"></i>gesamtzeit ca. 15 minuten</span>
-        </p>
+        <div class="banner_icons">
+          <p><img src="../assets/icons/clock-regular.svg" alt="clock icon"><span>ca. 15 minuten</span> </p>
+          <p><img src="../assets/icons/clock-regular.svg" alt="clock icon"><span>gesamtzeit ca. 25 minuten</span></p>
+        </div>
         <p class="zutate">
           Die Hähnchenbrust in Würfel schneiden, mit 1 EL Paprikapulver bestreuen, mit Salz und Pfeffer würzen und in
           einer Pfanne braten. Die Paprikaschote würfeln, in eine separate Pfanne geben und ebenfalls braten.
