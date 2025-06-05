@@ -252,13 +252,19 @@ button {
     margin-block-start: 0;
     margin-block-end: 0;
 }
-
+.section_recipes_container{
+    background-color: #EFEFEF;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
 .recipes_section {
     max-width: 1440px;
     margin: auto;
     padding-top: 20px;
-    background-color: #EFEFEF;
+    
 }
 
 
@@ -268,6 +274,7 @@ button {
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 30px;
 }
 .vs_container{
     display: flex;
