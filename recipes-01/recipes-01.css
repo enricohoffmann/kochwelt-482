@@ -91,8 +91,8 @@ main{
     margin: 15px;
     padding: 14px;
     margin-left: 0;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
     color: white;
     font-weight: 500;
     font-size: 20px;
@@ -102,17 +102,23 @@ main{
 }
 .form input, .form_rezept input{
     margin: 15px;
-    padding-right: 2px;
+    padding-right: 20px;
+    padding-left: 70px !important;
     margin-right: 0;
+    
     padding: 16px;
     border-radius:10px 0 0 10px;
-    padding-right: 0;  
     border: 1px solid grey;
 }
 
 .form_rezept input:focus{
     outline: none;
 }
+.error_portion{
+    display: none;
+    color: red;
+}
+
 
 table {
   border-collapse: collapse;
@@ -122,12 +128,12 @@ table {
 td{
   text-align: left;
   border-radius: 10px;
-  padding: 20px;
+  padding: 12px;
   margin: 8px;
 }
 
 tr:nth-child(odd) {
-    background-color: #dddddd;
+    background-color: #efefef;
 }
 td span{
     background-color: transparent;

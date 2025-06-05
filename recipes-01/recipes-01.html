@@ -21,7 +21,7 @@
     </div>
     <main class="main_rezept">
       <div class="banner">
-        <h2 class="title2">Hähnchen-Döner</h2>
+        <h1>Hähnchen-Döner</h1>
         <img src="../assets/img/haehnchen-doener.webp" alt="haehnchen-doener" class="banner_img" />
         <div class="banner_icons">
           <p><img src="../assets/icons/clock-regular.svg" alt="clock icon"><span>15min</span></p>
@@ -33,11 +33,12 @@
      <div class="form_rezept">
         <p> Zutaten für </p>
           <div class="calculate">
-            <input type="number" name="portion" id="portion_number" value="1" min="1"/>
+            <input type="number" name="portion" id="portion_number" value="1" min="1" max="20"/>
             <button id="portion_calculateBtn">Portionen</button>
           </div>
       </div>
       <table id="ingredient_table" class="ingredient_table">
+        <p class="error_portion" id="error_portion">Die Eingabe war ungültig. Es werden nur Zahlen zwischen 1 und 20 akzeptiert.</p>
         <tr>
 
         </tr>
@@ -45,7 +46,7 @@
       </table>
 
       <div class="zubereitung">
-        <h3 class="title3">Zubereitung</h3>
+        <h2>Zubereitung</h2>
         <div class="banner_icons">
           <p><img src="../assets/icons/clock-regular.svg" alt="clock icon"><span>ca. 15 minuten</span> </p>
           <p><img src="../assets/icons/clock-regular.svg" alt="clock icon"><span>gesamtzeit ca. 25 minuten</span></p>
@@ -64,7 +65,7 @@
       </div>
 
       <div class="ersteller">
-        <h4>Rezept erstellt von</h4>
+        <h3>Rezept erstellt von</h3>
         <div class="profile">
           <img src="../assets/img/profileRucel.jpg" alt="profile">
           <p>Rucel Dev</p>
