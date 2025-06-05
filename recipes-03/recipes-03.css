@@ -53,3 +53,11 @@ tr {
     align-items: center;
     gap: 30px;
 }
+
+.error {
+    color: rgb(187, 0, 0);
+}
+
+.denone {
+    display: none;
+}

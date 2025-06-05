@@ -38,88 +38,89 @@
 
         <section>
             <p>Zubereitung für:</p>
-            <input type="number" placeholder="Zahl">
-            <button>Positionen</button>
+            <input id="input" type="number" min="1" max="21" placeholder="Zahl" value="1">
+            <button onclick="query()">Positionen</button>
+            <p id="error" class="error denone">Die Zahl ist ungültig.</p>
 
 
             <table>
                 <tr class="background_grey">
-                    <td>150 g Hähnchenbrustfilet</td>
-                    <td>137 kcal</td>
+                    <td id="z1">150 g Hähnchenbrustfilet</td>
+                    <td id="kcal1">137 kcal</td>
                 </tr>
 
                 <tr>
-                    <td>1/4 Zwiebel</td>
-                    <td>12 kcal</td>
+                    <td id="z2">1/4 Zwiebel</td>
+                    <td> 12 kcal</td>
                 </tr>
 
                 <tr class="background_grey">
-                    <td>1 Knoblauchzehe</td>
+                    <td id="z3">1 Knoblauchzehe</td>
                     <td>4 kcal</td>
                 </tr>
 
                 <tr>
-                    <td>1 TL Öl</td>
+                    <td id="z4">1 TL Öl</td>
                     <td>40 kcal</td>
                 </tr>
 
                 <tr class="background_grey">
-                    <td>Salz</td>
+                    <td id="z5">Priese Salz</td>
                     <td>1 kcal</td>
                 </tr>
 
                 <tr>
-                    <td>Pfeffer</td>
+                    <td id="z6"> Priese Pfeffer</td>
                     <td>1 kcal</td>
                 </tr>
 
                 <tr class="background_grey">
-                    <td>1/2 TL Paprikapulver</td>
+                    <td id="z7">1/2 TL Paprikapulver</td>
                     <td>1 kcal</td>
                 </tr>
 
                 <tr>
-                    <td>50 ml Sahne</td>
+                    <td id="z8">50 ml Sahne</td>
                     <td>165 kcal</td>
                 </tr>
 
                 <tr class="background_grey">
-                    <td>50 ml Milch</td>
+                    <td id="z9">50 ml Milch</td>
                     <td>24 kcal</td>
                 </tr>
 
                 <tr>
-                    <td>1 TL Mehl</td>
+                    <td id="z10">1 TL Mehl</td>
                     <td>17 kcal</td>
                 </tr>
 
                 <tr class="background_grey">
-                    <td>1 TL Butter</td>
+                    <td id="z11">1 TL Butter</td>
                     <td>36 kcal</td>
                 </tr>
 
                 <tr>
-                    <td>1/2 TL Gemüsebrühepulver</td>
+                    <td id="z12">1/2 TL Gemüsebrühepulver</td>
                     <td>5 kcal</td>
                 </tr>
 
                 <tr class="background_grey">
-                    <td>1/2 TL Zitronensaft</td>
+                    <td id="z13">1/2 TL Zitronensaft</td>
                     <td>1 kcal</td>
                 </tr>
 
                 <tr>
-                    <td>Frische Petersilie</td>
+                    <td id="z14">Frische Petersilie</td>
                     <td>1 kcal</td>
                 </tr>
 
                 <tr class="background_grey">
-                    <td>60 g Langkornreis</td>
+                    <td id="z15">60 g Langkornreis</td>
                     <td>210 kcal</td>
                 </tr>
 
                 <tr>
-                    <td>120 ml Wasser</td>
+                    <td id="z16">120 ml Wasser</td>
                     <td>0 kcal</td>
                 </tr>
             </table>
@@ -129,20 +130,20 @@
             <h3> Zubereitung:</h3>
 
             <div id="icons_container">
-          
-                    <img class="icons" src="/assets/icons/clock-regular.svg" alt="Vorbereitungszeit = 15 Minuten ">
-                    <p>15 Minuten Vorbereitungszeit</p>
-           
 
-                
-                    <img class="icons" src="/assets/icons/clock-regular.svg" alt="Kochzeit = 25 Minuten ">
-                    <p>25 Minuten Kochzeit</p>
-              
+                <img class="icons" src="/assets/icons/clock-regular.svg" alt="Vorbereitungszeit = 15 Minuten ">
+                <p>15 Minuten Vorbereitungszeit</p>
 
-             
-                    <img class="icons" src="/assets/icons/clock-regular.svg" alt="Gesamtzeit = 40 Minuten ">
-                    <p> ca 40 Minuten Gesamtzeit</p>
-              
+
+
+                <img class="icons" src="/assets/icons/clock-regular.svg" alt="Kochzeit = 25 Minuten ">
+                <p>25 Minuten Kochzeit</p>
+
+
+
+                <img class="icons" src="/assets/icons/clock-regular.svg" alt="Gesamtzeit = 40 Minuten ">
+                <p> ca 40 Minuten Gesamtzeit</p>
+
             </div>
 
             <p>Zuerst den Reis unter kaltem Wasser abspülen und mit 120 ml Wasser sowie einer Prise Salz in einem
