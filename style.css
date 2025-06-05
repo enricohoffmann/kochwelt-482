@@ -181,6 +181,8 @@ a {
     height: 450px;
     width: auto;
     border-radius: 6px;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .recipe-of-day-right {
@@ -207,6 +209,8 @@ button {
     width: 320px;
     height: 320px;
     border-radius: 6px;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .recipes_container {
@@ -245,6 +249,8 @@ button {
     width: 320px;
     height: auto;
     border-radius: 6px;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .vs_text {
@@ -268,17 +274,16 @@ button {
 
 .footer {
     max-width: 1440px;
-    /* margin: 0 auto; */
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding-left: 24px;
-    padding-right: 24px;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .footer-mid-container{
     flex-grow: 1;
-    width: 20px;
+    /* width: 20px; */
 }
 
 .footer-kochwelt-logo {
@@ -288,8 +293,6 @@ button {
 
 .social-logos {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
     
 }
 
@@ -354,6 +357,10 @@ button {
         margin-left: 36px;
         margin-right: 36px;
     }
+
+    .footer-kochwelt-logo{
+        margin-left: 16px;
+    }
 }
 
 
@@ -380,6 +387,8 @@ button {
     .sozial-logo-links {
         width: 60px;
     }
+
+    
 }
 
 @media (max-width:650px) {
@@ -440,6 +449,7 @@ button {
 
     .social-logos {
         gap: 0px;
+        margin-right: 16px;
     }
 }
 
