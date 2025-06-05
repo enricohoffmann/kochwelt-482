@@ -156,3 +156,4 @@ function createLinkDiv(linkArray, divClasses) {
 function recipe01Open() {
     window.open("./recipes-01/recipes-01.html", "_self");
 }
+
