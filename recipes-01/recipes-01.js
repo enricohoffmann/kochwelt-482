@@ -43,12 +43,19 @@ document.addEventListener("DOMContentLoaded", function() {
             
         }
     }
-
+    let error_portion = document.getElementById('error_portion');
     const calculate = document.getElementById("portion_calculateBtn");
     calculate.addEventListener('click', function() {
           let number_portion = document.getElementById('portion_number').value;
           portion = parseInt(number_portion);
-          updateIngredients(selectedRecipe, portion);
+          if(portion>=1 && portion <=20){
+            updateIngredients(selectedRecipe, portion);
+          }else{
+            error_portion.style.display = "block";
+            setTimeout(function() {
+              error_portion.style.display = "none";
+            }, 2000);
+          }
       });
 
     updateIngredients(selectedRecipe, portion); 

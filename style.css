@@ -194,6 +194,7 @@ a {
 .recipe-of-day-container {
     max-width: 1440px;
     margin: 0 auto;
+    padding-bottom: 40px;
 }
 
 .recipe-of-day {
@@ -566,6 +567,11 @@ button {
     }
     .recipe-of-day-info{
         font-size: 16px;
+    }
+
+    .rezept_link{
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     .footer-kochwelt-logo {
