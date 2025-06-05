@@ -64,6 +64,12 @@ textarea:focus{
     border-radius: 10px;
 }
 
+.kontakt-content {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+}
+
 
 @media (max-width:700px) {
     .form input{
