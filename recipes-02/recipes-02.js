@@ -67,6 +67,6 @@ function recipeCalculator(value) {
 
 
     loadHeader(false);
-    loadFooter(false);  
+    loadFooter(false);
 }
 
