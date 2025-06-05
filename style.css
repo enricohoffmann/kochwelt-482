@@ -10,6 +10,13 @@ body {
     flex-direction: column;
 }
 
+/* ************************************** */
+/* Hero */
+/* ************************************** */
+
+.hero-section {
+    height: 100vh;
+}
 
 /* ************************************** */
 /* Header */
@@ -125,7 +132,7 @@ header {
 /* ************************************** */
 
 
-.thankyou{
+.thankyou {
     max-width: 1440px;
     margin: auto;
     top: 50%;
@@ -136,7 +143,8 @@ header {
     align-items: center;
     flex-direction: column;
 }
-.thankyou h1{
+
+.thankyou h1 {
     color: #008000;
 }
 
@@ -168,21 +176,24 @@ a {
 
 .recipe-of-day-container {
     max-width: 1440px;
-    margin: auto;
-    padding: 40px 120px;
-    padding-top: 50px;
-    padding-bottom: 100px;
-    display: flex;
-    align-items: flex-start;
-    gap: 35px;
+    margin: 0 auto;
+    height: 100vh;
 }
 
+.recipe-of-day {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 36px;
+    margin-top: 36px;
+    margin-left: 36px;
+    margin-right: 36px;
+}
+
+
 .recipe-of-day-img {
-    height: 450px;
-    width: auto;
-    border-radius: 6px;
     object-fit: cover;
-    object-position: center center;
+    border-radius: 6px;
 }
 
 .recipe-of-day-right {
@@ -281,7 +292,7 @@ button {
     margin: 0 auto;
 }
 
-.footer-mid-container{
+.footer-mid-container {
     flex-grow: 1;
     /* width: 20px; */
 }
@@ -293,7 +304,7 @@ button {
 
 .social-logos {
     display: flex;
-    
+
 }
 
 .sozial-logo-links {
@@ -352,14 +363,28 @@ button {
 /***********************************/
 
 
-@media(max-width:1500px){
-    .impressum-container{
+@media(max-width:1500px) {
+    .impressum-container {
         margin-left: 36px;
         margin-right: 36px;
     }
 
-    .footer-kochwelt-logo{
+    .footer-kochwelt-logo {
         margin-left: 16px;
+    }
+}
+
+
+@media(max-width:1200px) {
+    .recipe-of-day-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .recipe-of-day-info{
+        padding-bottom: 0;
     }
 }
 
@@ -388,7 +413,15 @@ button {
         width: 60px;
     }
 
-    
+
+}
+
+@media(max-width:840px) {
+    .recipe-of-day {
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
 }
 
 @media (max-width:650px) {
@@ -452,5 +485,3 @@ button {
         margin-right: 16px;
     }
 }
-
-
