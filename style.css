@@ -174,7 +174,8 @@ a {
     text-decoration: none;
     color: black;
 }
-.rezept_link{
+
+.rezept_link {
     margin: 15px;
     width: 200px;
     text-align: center;
@@ -255,12 +256,15 @@ button {
 }
 
 
+.recipe-frame {
+    background-color: #EFEFEF;
+}
+
 .recipes_section {
     max-width: 1440px;
     margin: auto;
     padding: 40px 120px;
     padding-top: 20px;
-    background-color: #EFEFEF;
 }
 
 
@@ -272,7 +276,8 @@ button {
     align-items: center;
     flex-direction: column;
 }
-.vs_container{
+
+.vs_container {
     display: flex;
     flex-direction: row;
 
@@ -407,7 +412,7 @@ button {
 
     }
 
-    .recipe-of-day-info{
+    .recipe-of-day-info {
         padding-bottom: 0;
     }
 }
