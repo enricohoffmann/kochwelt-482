@@ -7,7 +7,7 @@ const sendMessageBtn = document.getElementById('sendMessage');
 let validator = false;
 let check = 0;
 
-sendMessageBtn.addEventListener('click', function() {
+sendMessageBtn.addEventListener('click', function(event) {
     name_user = Name.value
     email_user = Email.value
     betreff_user = Betreff.value
@@ -20,13 +20,31 @@ sendMessageBtn.addEventListener('click', function() {
     console.log(valideEmail);
 
     if(validator == true && check >= 3) {
-        alert(name_user + " " + email_user + " " + betreff_user + " " + message_user);
+        sendMail(event)
     }
     else{
         alert("Bitte füllen Sie alle Felder aus");
     }
 
 });
+
+function sendMail(event){
+    event.preventDefault();
+    const data = new FormData(event.target.form);
+
+    fetch("https://formspree.io/f/xeokjyyp", {
+        method: "POST",
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(() => {
+        window.location.href = "./send_mail.html";
+    }).catch((error) => {
+        console.log(error);
+    });
+}
+
 
 function valideName(name){
     if(name.length<2 || name.length< 0){
