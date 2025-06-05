@@ -9,46 +9,50 @@
     <link rel="stylesheet" href="../style.css">
     <script src="./recipes-03.js"></script>
     <script src="../script.js"></script>
+    <link rel="icon" type="image/x-icon" href="/assets/img/">
 </head>
 
 <body onload="recipe03load()">
-    <div class="content-center-header">
-        <header></header>
-    </div>
+    <div class="content">
 
-    <section id="main_container">
-        <section>
-            <div>
-                <h1>Hähnchengeschnetzeltes mit Reis & weißer Cremesauce</h1>
-                <img id="img" src="/assets/img/rezept_3_img.jpg"
-                    alt="Hähnchengeschnetzeltes mit Reis & weißer Cremesauce">
-            </div>
+        <div class="content-center-header">
+            <header></header>
+        </div>
 
-            <div class="icons_section">
-
-                <div class="icons_container">
-                    <img class="icons" src="/assets/icons/clock-regular.svg" alt="Gesamtzeit 40 Minuten">
-                    <p> ca 40 Minuten</p>
+        <section id="main_container">
+            <section>
+                <div>
+                    <h1>Hähnchengeschnetzeltes mit Reis</h1>
+                    <img id="img" src="/assets/img/rezept_3_img.jpg"
+                        alt="Hähnchengeschnetzeltes mit Reis & weißer Cremesauce">
                 </div>
 
-                <div class="icons_container">
-                    <img class="icons" src="/assets/icons/brain-solid.svg" alt="Schwierigkeitsgrad = leicht">
-                    <p>leicht</p>
+                <div class="icons_section">
+
+                    <div class="icons_container">
+                        <img class="icons" src="/assets/icons/clock-regular.svg" alt="Gesamtzeit 40 Minuten">
+                        <p> ca 40 Minuten</p>
+                    </div>
+
+                    <div class="icons_container">
+                        <img class="icons" src="/assets/icons/brain-solid.svg" alt="Schwierigkeitsgrad = leicht">
+                        <p>leicht</p>
+                    </div>
+
+                    <div class="icons_container">
+                        <img class="icons" src="/assets/icons/calendar-alt-regular.svg" alt="Erstellt am 04.06.2025">
+                        <p>04.06.2025</p>
+                    </div>
                 </div>
+            </section>
 
-                <div class="icons_container">
-                    <img class="icons" src="/assets/icons/calendar-alt-regular.svg" alt="Erstellt am 04.06.2025">
-                    <p>04.06.2025</p>
-                </div>
-            </div>
-        </section>
 
-        <section>
-            <p>Zubereitung für:</p>
-            <input id="input" type="number" min="1" max="21" placeholder="Zahl" value="1">
-            <button onclick="query()">Positionen</button>
-            <p id="error" class="error denone">Die Zahl ist ungültig.</p>
-
+            <section>
+                <p>Zubereitung für:</p>
+                <input id="input" type="number" min="1" max="21" placeholder="Zahl" value="1">
+                <button onclick="query()">Positionen</button>
+                <p> id="error" class="error denone">Die Zahl ist ungültig.</p>
+            </section>
 
             <table>
                 <tr class="background_grey">
@@ -131,60 +135,68 @@
                     <td>0 kcal</td>
                 </tr>
             </table>
+
+
+            <section>
+                <h2> Zubereitung:</h2>
+
+                <div class="icons_section">
+
+                    <div class="icons_container">
+                        <img class="icons" src="/assets/icons/clock-regular.svg" alt="15 min Vorbereitungszeit">
+                        <p> 15 min Vorbereitungszeit</p>
+                    </div>
+
+                    <div class="icons_container">
+                        <img class="icons" src="/assets/icons/clock-regular.svg" alt="25 Minuten Kochzeit">
+                        <p> 25 Minuten Kochzeit</p>
+                    </div>
+
+                    <div class="icons_container">
+                        <img class="icons" src="/assets/icons/clock-regular.svg" alt="Gesamtzeit 40 Minuten">
+                        <p> ca 40 Minuten</p>
+                    </div>
+
+                </div>
+
+                <p>
+                    Zuerst den Reis unter kaltem Wasser abspülen und mit 120 ml Wasser sowie einer Prise Salz in einem
+                    kleinen Topf zum Kochen bringen. Dann die Hitze reduzieren und den Reis zugedeckt etwa 15 Minuten
+                    köcheln lassen, bis das Wasser vollständig aufgenommen ist.
+
+                    Während der Reis kocht, die Hähnchenbrust in feine Streifen schneiden. Die Zwiebel und optional eine
+                    kleine Knoblauchzehe schälen und fein hacken. In einer Pfanne 1 TL Öl erhitzen und das Fleisch darin
+                    rundherum scharf anbraten. Zwiebel und Knoblauch hinzufügen und kurz mitbraten. Mit Salz, Pfeffer
+                    und
+                    Paprikapulver würzen. Das Fleisch anschließend aus der Pfanne nehmen und beiseitestellen.
+
+                    In derselben Pfanne 1 TL Butter schmelzen und das Mehl einrühren. Kurz anschwitzen, ohne dass es
+                    Farbe
+                    annimmt. Unter ständigem Rühren langsam Milch und Sahne hinzufügen, sodass eine glatte Sauce
+                    entsteht.
+                    Diese mit Gemüsebrühepulver, Zitronensaft, einer Prise Muskatnuss, Salz und Pfeffer abschmecken. Die
+                    Sauce ein paar Minuten köcheln lassen, bis sie cremig ist. Dann das gebratene Hähnchen zurück in die
+                    Pfanne geben und einige Minuten in der Sauce ziehen lassen.
+
+                    Zum Servieren den Reis auf einen Teller geben und das Hähnchengeschnetzelte mit der weißen
+                    Cremesauce
+                    darüber verteilen. Nach Belieben mit frischen Kräutern wie Petersilie oder Schnittlauch bestreuen.
+                </p>
+            </section>
+
+            <section id="profile_section">
+                <h3>Rezept Erstellt von: </h3>
+                <div id="profile_container">
+                    <img id="profile_img" src="/assets/img/profile.png" alt="">
+                    <p>Mert</p>
+                </div>
+            </section>
         </section>
 
-        <section>
-            <h3> Zubereitung:</h3>
 
-            <div id="icons_container">
-
-                <img class="icons" src="/assets/icons/clock-regular.svg" alt="Vorbereitungszeit = 15 Minuten ">
-                <p>15 Minuten Vorbereitungszeit</p>
-
-
-
-                <img class="icons" src="/assets/icons/clock-regular.svg" alt="Kochzeit = 25 Minuten ">
-                <p>25 Minuten Kochzeit</p>
-
-
-
-                <img class="icons" src="/assets/icons/clock-regular.svg" alt="Gesamtzeit = 40 Minuten ">
-                <p> ca 40 Minuten Gesamtzeit</p>
-
-            </div>
-
-            <p>Zuerst den Reis unter kaltem Wasser abspülen und mit 120 ml Wasser sowie einer Prise Salz in einem
-                kleinen Topf zum Kochen bringen. Dann die Hitze reduzieren und den Reis zugedeckt etwa 15 Minuten
-                köcheln lassen, bis das Wasser vollständig aufgenommen ist.
-
-                Während der Reis kocht, die Hähnchenbrust in feine Streifen schneiden. Die Zwiebel und optional eine
-                kleine Knoblauchzehe schälen und fein hacken. In einer Pfanne 1 TL Öl erhitzen und das Fleisch darin
-                rundherum scharf anbraten. Zwiebel und Knoblauch hinzufügen und kurz mitbraten. Mit Salz, Pfeffer und
-                Paprikapulver würzen. Das Fleisch anschließend aus der Pfanne nehmen und beiseitestellen.
-
-                In derselben Pfanne 1 TL Butter schmelzen und das Mehl einrühren. Kurz anschwitzen, ohne dass es Farbe
-                annimmt. Unter ständigem Rühren langsam Milch und Sahne hinzufügen, sodass eine glatte Sauce entsteht.
-                Diese mit Gemüsebrühepulver, Zitronensaft, einer Prise Muskatnuss, Salz und Pfeffer abschmecken. Die
-                Sauce ein paar Minuten köcheln lassen, bis sie cremig ist. Dann das gebratene Hähnchen zurück in die
-                Pfanne geben und einige Minuten in der Sauce ziehen lassen.
-
-                Zum Servieren den Reis auf einen Teller geben und das Hähnchengeschnetzelte mit der weißen Cremesauce
-                darüber verteilen. Nach Belieben mit frischen Kräutern wie Petersilie oder Schnittlauch bestreuen.
-            </p>
-        </section>
-
-        <section id="profile_section">
-            <h3>Rezept Erstellt von: </h3>
-            <div id="profile_container">
-                <img id="profile_img" src="/assets/img/profile.png" alt="">
-                <p>Mert</p>
-            </div>
-        </section>
-    </section>
-    </section>
-
-    <div class="content-center-footer">
-        <footer></footer>
+        <div class="content-center-footer">
+            <footer></footer>
+        </div>
     </div>
 </body>
 
