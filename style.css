@@ -503,7 +503,6 @@ button {
         display: flex;
         justify-content: center;
         flex-direction: row;
-        /* flex-wrap: wrap; */
     }
 
     .recipes_img {
@@ -527,6 +526,11 @@ button {
 }
 
 @media (max-width:650px) {
+
+    .header-links{
+        align-items: center;
+    }
+
     .header-links a {
         display: none;
     }
