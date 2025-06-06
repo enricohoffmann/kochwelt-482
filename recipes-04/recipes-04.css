@@ -63,7 +63,7 @@ h1 {
     align-items: center;
     margin-top: 8px;
 
-    p {
+    label {
         margin-right: 8px;
     }
 
@@ -183,8 +183,10 @@ h2 {
         align-items: center;
         justify-content: center;
 
-        p {
+        label {
             margin-right: 0px;
+            margin-bottom: 4px;
+            font-weight: 600;
         }
 
         input {
