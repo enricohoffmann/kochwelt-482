@@ -2,24 +2,30 @@ body {
     margin: 0;
 }
 
-#main_container {
-    padding: 20px 250px;
+#aot_section {
+    flex: 1;
 }
+
+#main_container {
+    padding: 40px 200px;
+}
+
+
 
 #img {
     width: 100%;
     height: 200px;
     border-radius: 8px;
     object-fit: cover;
-
 }
 
 .icons {
     width: 20px;
 }
 
-#icons_container {
-    display: flex;
+
+#border {
+    border: 1px solid #efefef;
 }
 
 input {
@@ -28,14 +34,24 @@ input {
     font-size: 25px;
 }
 
+.input_section {
+    padding-top: 50px;
+}
+
+.input_container {
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
 
 .background_grey {
     background-color: #efefef;
+    height: auto;
+    width: auto;
 }
 
 table {
     width: 100%;
-    font-size: 20px;
     padding-top: 20px;
 }
 
@@ -45,6 +61,9 @@ td {
     padding-left: 20px;
 }
 
+#zubereitung_section {
+    padding-top: 50px;
+}
 
 #profile_img {
     border-radius: 100%;
@@ -83,10 +102,83 @@ td {
 
 
 
-@media(max-width: 1030px) {
+@media(max-width: 1200px) {
+
+    h1 {
+        text-align: center;
+    }
+
+    #main_container {
+        padding: 20px 100px;
+    }
+
+    td {
+        padding-left: 10px;
+    }
+
+    #zubereitung_text {
+        text-align: center;
+    }
+
     .icons_section {
-        display: flex;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 900px) {
+    h1 {
+        font-size: 30px !important;
+    }
+
+    .icons_container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media(max-width: 700px) {
+    #main_container {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    th {
+        font-size: 14px !important;
+    }
+
+    #main_container {
+        padding: 10px 5px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    td {
+        padding-left: 10px;
+    }
+
+    #profile_section {
+        padding-left: 20%;
+    }
+
+    .icons_section {
         flex-direction: column;
-       align-items: center;
+    }
+
+    .icons_container {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 400px) {
+    h1 {
+        font-size: 18px !important;
+    }
+
+    td {
+        padding-left: 8px;
     }
 }
