@@ -108,7 +108,7 @@ header {
     top: 80px;
     right: 0;
 
-    transition: all 250ms ease-in-out;
+    transition: all 125ms ease-in-out;
 
     a {
         text-decoration: none;
@@ -207,7 +207,7 @@ a {
     padding-right: 70px;
     margin-top: 10px;
     font-size: 20px;
-    background-color: #4E9525;
+    background-color: #008000;
     border: none;
     color: white;
 }

@@ -153,7 +153,7 @@ function createLinkDiv(linkArray, divClasses) {
     return div;
 }
 
-function recipe01Open() {
+/* function recipe01Open() {
     window.open("./recipes-01/recipes-01.html", "_self");
-}
+} */
 
